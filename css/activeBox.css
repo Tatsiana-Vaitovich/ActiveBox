@@ -1,0 +1,802 @@
+/*задаем измерение размера блока
+  ========================================================================== */
+
+*, 
+*::before, 
+*::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*подключаем нестандартные шрифты
+  ========================================================================== */
+
+@font-face {
+  font-family: "Raleway";
+  font-weight: 400;
+  font-style: normal;
+  src: local("Raleway Regular"),  /*директива local() позволяет ссылаться на шрифт и загружать его, а также использовать шрифты, установленные на устройстве пользователя*/
+  url("../font/raleway-regular-webfont.woff2") format("woff2"),
+  url("../font/raleway-regular-webfont.woff") format("woff"),
+  url("../font/raleway-regular.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Raleway";
+  font-weight: 700;
+  font-style: normal;
+  src: local("Raleway Bold"),
+  url("../font/raleway-bold-webfont.woff2") format("woff2"),
+  url("../font/raleway-bold-webfont.woff") format("woff"),
+  url("../font/raleway-bold-webfont.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Raleway";
+  font-weight: 300;
+  font-style: normal;
+  src: local("Raleway light"),
+  url("../font/raleway-light-webfont.woff2") format("woff2"),
+  url("../font/raleway-light-webfont.woff") format("woff"),
+  url("../font/raleway-light-webfont.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Raleway";
+  font-weight: 600;
+  font-style: normal;
+  src: local("Raleway SemiBold"),
+  url("../font/raleway-semibold-webfont.woff2") format("woff2"),
+  url("../font/raleway-semibold-webfont.woff") format("woff"),
+  url("../font/raleway-semibold-webfont.ttf") format("ttf");
+}
+
+/*задаем общие свойства
+  ========================================================================== */
+
+.overall {  /*body*/
+  width: 1900px;
+  margin: auto;
+  font-size: 100%;  /*16px*/
+  font-family: "Open Sans", "Myriad pro", Helvetica, Arial, sans-serif;
+  background-color: #ffffff;
+}
+
+/*header-block
+  ========================================================================== */
+
+.header-block {
+  position: relative;
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  z-index: 5;
+  width: 1900px;
+  background-color: #313454;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 62%;
+  margin: auto;
+  padding: 25px 0 25px 0;
+  background: url("../img/border-bottom-header.png") repeat-x bottom;
+}
+
+.logo {
+  width: 16%;
+  padding: 7px 0 7px 0;
+  text-indent: -9000px;
+  background: url("../img/logo.png") no-repeat left;
+}
+
+.logo__caption1 {
+  margin: 0;
+  padding: 0;
+}
+
+.navigation {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 84%;
+  text-align: right;
+}
+
+.navigation__list {
+  margin: 0;
+  padding: 0;
+}
+
+.navigation__item {  /*item - li*/
+  display: inline-block; 
+}
+
+.navigation__link {
+  padding: 17px 5px 17px 75px;
+  font-size: 0.8em;
+  font-family: "Raleway Bold";
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/*masthead
+  ========================================================================== */
+
+.masthead {
+  min-height: 750px;
+  margin: 0px auto auto;
+  padding: 250px 0 150px 0;
+  background: url("../img/header-block.png") no-repeat;
+  background-color: #313454;
+}
+
+.masthead__wrapper {
+  width: 48%;  /*920px*/
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.masthead__caption {
+  margin: 0;
+  padding: 0;
+  font-size: 4em;
+  line-height: 110%;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  color: #ffffff;
+}
+
+.masthead__info {
+  margin: 40px 0 0 0;
+  padding: 0;
+  font-size: 1.4em;
+  line-height: 150%;
+  font-family: "Raleway Regular";
+  font-weight: 400;
+  text-align: center;
+  color: #ffffff;
+}
+
+.masthead__btn {
+  margin: 80px auto 0 auto;
+}
+
+/*features-block
+  ========================================================================== */
+
+.features-block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+  width: 57%;  /*1080px*/
+  margin-right: auto;
+  margin-left: auto;
+  padding: 45px 0 120px 0;
+}
+
+.feature {
+  width: 29%;  /*300px*/
+  margin-top: 75px;
+}
+
+.feature::before {
+  content: "";
+  display: block;
+  height: 60px;
+  margin: auto;
+}
+
+.feature--customised {
+  margin-right: 6.5%;
+}
+
+.feature--customised::before {
+  width: 60px;
+  background: url("../img/feature1.png") no-repeat;
+}
+
+.feature--responsive {
+  margin-right: 6.5%;
+}
+
+.feature--responsive::before {
+  width: 73px;
+  background: url("../img/feature2.png") no-repeat;
+}
+
+.feature--design::before {
+  width: 41px;
+  background: url("../img/feature3.png") no-repeat;
+}
+
+.feature--code::before {
+  width: 56px;
+  height: 60px;
+  background: url("../img/feature4.png") no-repeat;
+}
+
+.feature--ready::before {
+  width: 72px;
+  background: url("../img/feature5.png") no-repeat;
+}
+
+.feature--download::before {
+  width: 79px;
+  background: url("../img/feature6.png") no-repeat;
+}
+
+
+.feature__caption {
+  margin: 30px 0 0 0;
+  padding: 0;
+  font-size: 1em;
+  text-align: center;
+}
+
+.feature__link {
+  font-size: 0.9em;
+  font-family: "Raleway Bold";
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  color: #2d3033;
+}
+
+.feature__info {
+  text-align: center;
+}
+
+.info-text {
+  margin: 25px 0 0 0;
+  padding: 0;
+  font-size: 0.9em;
+  line-height: 150%;
+  font-family: "Raleway Regular";
+  font-weight: 400;
+  color: #6c7279;
+}
+
+/*works-block
+  ========================================================================== */
+
+.works-block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+  text-align: center;
+}
+
+.work {
+  position: relative;
+  z-index: 0;
+  display: block;
+  margin: 1px 1px 0 0;  /*для border*/
+  height: 349px; /*350 c вычетом border-top*/
+  background-color: #e84545; 
+  border-right: 1px solid #ffffff;
+  border-top: 1px solid #ffffff;
+  overflow: hidden; 
+}
+
+.works-block__work1, 
+.works-block__work4, 
+.works-block__work5, 
+.works-block__work8 {
+  width: 469px;  /*470px с вычетом border-rignt*/
+}
+
+.works-block__work2, 
+.works-block__work3, 
+.works-block__work6, 
+.works-block__work7 {
+  width: 479px;  /*480px с вычетом border-rignt*/
+}
+
+.work__img {
+  z-index: 1;
+  opacity: 1;  /*прозрачность для firefox*/
+  filter: alpha(opacity=100);  /*прозрачность для IE*/
+  -webkit-transition: opacity ease-in-out .5s, transform ease-in-out .5s;
+  -moz-transition: opacity ease-in-out .5s, transform ease-in-out .5s;
+  -o-transition: opacity ease-in-out .5s, transform ease-in-out .5s;
+  transition: opacity ease-in-out .5s, transform ease-in-out .5s;
+}
+
+.work__img:hover {
+  opacity: 0.1;
+  filter: alpha(opacity=100);
+  -webkit-transform: scale(1.2, 1.2);
+  -moz-transform: scale(1.2, 1.2);
+  -o-transform: scale(1.2, 1.2);
+  transform: scale(1.2, 1.2);
+}
+
+.work__thumb {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -1;  /*чтобы текст ссылки не появлялся сразу - важно, чтобы индекс=-1, т.е размещаем текст за блоком work*/
+  height: 100%;
+  width: 100%;
+  transform: translate(-50%, -50%);  /*позиционируем блок внутри родительского блока и внутри себя*/
+}
+
+.work__thumb-caption, 
+.work__thumb-info {
+  position: absolute;
+  left: 50%;
+  display: block;
+  margin: 0;
+  padding: 0;
+  font-size: 0.9em;
+  line-height: 150%;
+  font-family: "Raleway Bold";
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+  transform: translate(-50%, -50%);
+}
+
+.work__thumb-caption {
+  top: 45%;
+}
+
+.work__thumb-info {
+  top: 55%;
+  font-family: "Raleway Regular";
+  font-weight: 400;
+  text-transform: none;
+}
+
+/*team-block
+  ========================================================================== */
+
+.team-block {
+  display: flex;
+  justify-content: space-between;
+  width: 61.6%;  /*1170px*/
+  margin-right: auto;
+  margin-left: auto;
+  padding: 100px 0 100px 0;
+}
+
+.team {
+  width: 25%;  /*300px*/
+}
+
+.team__name {
+  margin: 30px 0 0 0;
+  padding: 0;
+  font-size: 1.4em;
+  font-weight: 400;
+  font-family: "Raleway Regular";
+  text-align: left;
+  color: #2d3033;
+}
+
+.team__position {
+  margin: 10px 0 0 0;
+  padding: 0;
+  font-size: 0.8em;
+  font-family: "Raleway Regular";
+  font-weight: 400;
+  text-align: left;
+  color: #e84545;
+}
+
+.team__info {
+  text-align: left;
+}
+
+.team__networks {
+  width: 130px;
+  height: 40px;
+  margin-top: 25px;
+}
+
+.networks__list {
+  margin: 0;
+  padding: 0;
+}
+
+.networks__item {
+  display: inline-block;
+}
+
+.networks__link {
+  display: block;
+  width: 40px;
+  height: 40px;
+  text-indent: -9000px;
+}
+
+.team__networks--facebook {
+  background: url("../img/sprite.png") no-repeat 0 0;
+}
+
+.team__networks--facebook:hover {
+  background: url("../img/sprite.png") no-repeat 0 -50px;
+}
+
+.team__networks--twitter {
+  background: url("../img/sprite.png") no-repeat -40px 0;
+}
+
+.team__networks--twitter:hover {
+  background: url("../img/sprite.png") no-repeat -40px -50px;
+}
+
+.team__networks--linkedin {
+  background: url("../img/sprite.png") no-repeat -80px 0;
+}
+
+.team__networks--linkedin:hover {
+  background: url("../img/sprite.png") no-repeat -80px -50px;
+}
+
+/*clients-block
+  ========================================================================== */
+
+.clients-block {
+  position: relative;
+  width: 100%;
+  height: 500px;
+}
+
+.clients-block>input {  /*дочерние input родитель clients-bar*/
+  display: none;  /*радио-кнопки скрываем, т.к оформить их нельзя. будем использовать их посредством label*/
+}
+
+.slider {
+  position: relative;
+  overflow: hidden;  /*отображается только область внутри элемента, остальное будет скрыто*/
+  z-index: -1;
+  width: inherit;
+  height: inherit;
+  background-color: #53354a;  /*фон задаем для блока слайдер а не для родительского блока!!!!!*/
+}
+
+.slide {
+  position: absolute;
+  z-index: 0;
+  width: inherit;
+  height: inherit;  /*не забываем указывать и высоту блока*/
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transform: translateX(-1900px);
+  -moz-transform: translateX(-1900px);
+  -o-transform: translateX(-1900px);
+  transform: translateX(-1900px);
+  -webkit-transition: opacity ease-in-out .5s, transform ease-in-out .8s;
+  -moz-transition: opacity ease-in-out .5s, transform ease-in-out .8;
+  -o-transition: opacity ease-in-out .5s, transform ease-in-out .8;
+  transition: opacity ease-in-out .5s, transform ease-in-out .8;
+}
+
+.slide__photo {
+  position: absolute;
+  display: inline-block;
+  width: 50%;
+  height: inherit;
+}
+
+.slide__photo--client1 {
+  background-image: url("../img/clients1.jpg");
+}
+
+.slide__photo--client2 {
+  background-image: url("../img/clients2.jpg");
+}
+
+.slide__photo--client3 {
+  background-image: url("../img/clients3.jpg");
+}
+
+.slide__photo--client4 {
+  background-image: url("../img/clients4.jpg");
+}
+
+.slide__photo--client5 {
+  background-image: url("../img/clients5.jpg");
+}
+
+.slide__text {
+  position: absolute;  /*для всех слайдов мы указали абсолютное позиционирование, чтобы можно было играть с эффектами появления*/
+  display: block;
+  width: 53.7%;  /*510px*/
+  height: inherit;
+  margin-left: 50%;
+  padding: 105px 375px 175px 80px;
+  text-align: left;
+}
+
+.slide__quote {
+  font-style: italic;
+  font-size: 2.25em;
+  line-height: 120%;
+  font-family: Cardo;
+  color: #ffffff;
+}
+
+.slide__info {
+  margin: 0;
+  padding: 40px 0 0 0;
+  font-size: 0.8em;
+  line-height: 160%;
+  font-family: "Raleway Bold";
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.controls {
+  position: absolute;
+  top: 380px;
+  left: 1235px;
+  z-index: 2;
+  width: 105px;
+}
+
+.controls__btn {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 7px;
+  background-color: #ffffff;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  opacity: 0.2;
+  filter: alpha(opacity=20);
+  cursor: pointer;
+  -webkit-transition: opacity ease-in-out 1s, filter ease-in-out 1s;  /*переход цвета при наведении курсора плавный, в течении 0.5с по соответствующей кривой безье*/
+  -moz-transition: opacity ease-in-out 1s, filter ease-in-out 1s;
+  -o-transition: opacity ease-in-out 1s, filter ease-in-out 1s;
+  transition: opacity ease-in-out 1s, filter ease-in-out 1s;
+}
+
+/*мeняем прозрачность кнопок*
+изначально наши кнопки с прозрачностью 20%.
+этим селектором мы говорим браузеру: если кнопка #slide1 выбрана пользователем,
+измени стиль лейблу под номером 1, если выбрана кнопка2 - измени лейбл лейблу под номером 2.
+символ ~ который позволяет выбрать элементы, лежащие за указанным перед ним селектором
+В этом селекторе использовано два псевдокласса, а также символ ~ который позволяет выбрать
+элементы, лежащие за указанным перед ним селектором.
+псевдокласс :checked является одним из нововведений CSS3 и позволяет применять стили
+в зависимости от того, выбрана ли радиокнопка или чекбокс или нет.
+:nth-of-type используется для добавления стиля к элементам указанного типа на основе
+нумерации в дереве элементов
+*/
+
+.controls__btn:hover, 
+#slide--client1:checked~.controls label:nth-of-type(1),  /*сами лейблы без номеров*/
+#slide--client2:checked~.controls label:nth-of-type(2),
+#slide--client3:checked~.controls label:nth-of-type(3),
+#slide--client4:checked~.controls label:nth-of-type(4),
+#slide--client5:checked~.controls label:nth-of-type(5) {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-transform: none;
+  -moz-transform: none;
+  -o-transform: none;
+  transform: none;
+}
+
+  /*заставляем слайды работать:*/
+
+#slide--client1:checked~.slider>.slide--client1, 
+#slide--client2:checked~.slider>.slide--client2, 
+#slide--client3:checked~.slider>.slide--client3, 
+#slide--client4:checked~.slider>.slide--client4, 
+#slide--client5:checked~.slider>.slide--client5 {
+  z-index: 1;
+  opacity: 1;
+  -webkit-transform: none;
+  -moz-transform: none;
+  -o-transform: none;
+  transform: none;
+}
+
+/*donload
+  ========================================================================== */
+
+.download {
+  padding: 100px 0 100px 0;
+}
+
+.download__caption {
+  margin: 0;
+  padding: 0;
+  font-size: 1.8em;
+  line-height: 75%;
+  font-family: "Raleway light";
+  font-weight: 300;
+  text-align: center;
+  color: #2d3033;
+}
+
+.download__text {
+  margin: 15px 0 0 0;
+  padding: 0;
+  font-size: 0.8em;
+  line-height: 160%;
+  font-family: "Raleway Bold";
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  color: #2d3033;
+}
+
+.btn {
+  display: block;
+  width: 280px;
+  height: 46px;
+  padding-top: 16px;
+  border: none;
+  font-size: 0.8em;
+  font-family: "Raleway SemiBold";
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  color: #ffffff;
+  background-color: #e84545;
+  -webkit-transition: background-color ease-in-out .5s;
+  -moz-transition: background-color ease-in-out .5s;
+  -o-transition: background-color ease-in-out .5s;
+  transition: background-color ease-in-out .5s;
+}
+
+.download__btn {
+  margin: 20px auto 0 auto;
+}
+
+.btn:hover {
+  background-color: #e72929;
+}
+
+/*footer-block
+  ========================================================================== */
+
+.footer-block {
+  z-index: -1;
+  background-color: #3a3e64;
+}
+
+.footer__wrapper {
+  display: flex;
+  width: 54%;  /*1020px*/
+  margin-right: auto;
+  margin-left: auto;
+  padding: 65px 0 65px 0;
+}
+
+.footer__wrapper--start {
+  display: flex;
+  justify-content: flex-start;
+  width: 33.33%;
+
+}
+
+.footer__wrapper--center {
+  display: flex;
+  justify-content: center;
+  width: 33.33%;
+
+}
+
+.footer__wrapper--end {
+  display: flex;
+  justify-content: flex-end;
+  width: 33.33%;
+
+}
+
+.footer__location {
+  width: 150px;
+}
+
+.footer__share {
+  width: 140px;
+}
+
+.footer__info-activebox {
+  width: 330px;
+}
+
+.footer__link {
+  text-decoration: none;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 1);
+}
+
+.footer__link:hover {
+  color: #e84545;
+}
+
+.footer__caption {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+  font-size: 0.9em;
+  font-family: "Raleway Bold";
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  color: #ffffff;
+}
+
+.footer__info {
+  margin: 0;
+  padding: 0;
+  font-size: 0.9em;
+  line-height: 160%;
+  font-family: "Myriad pro";
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.footer__networks--facebook {
+  margin-right: 5px;
+  background: url("../img/sprite1.png") no-repeat 0 0;
+}
+
+.footer__networks--facebook:hover {
+  background: url("../img/sprite.png") no-repeat 0 -50px;
+}
+
+.footer__networks--twitter {
+  margin-right: 5px;
+  background: url("../img/sprite1.png") no-repeat -40px 0;
+}
+
+.footer__networks--twitter:hover {
+  background: url("../img/sprite.png") no-repeat -40px -50px;
+}
+
+.footer__networks--linkedin {
+  background: url("../img/sprite1.png") no-repeat -80px 0;
+}
+
+.footer__networks--linkedin:hover {
+  background: url("../img/sprite.png") no-repeat -80px -50px;
+}
+
+.copyright {
+  z-index: 1;
+  padding: 30px 0 30px 0;
+  background-color: #313454;
+}
+
+.copyright__info {
+  width: 300px;
+  margin: auto;
+}
+
+.copyright__link::before {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background: url(../img/heard.png) no-repeat;
+}

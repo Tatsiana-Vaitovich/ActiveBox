@@ -1,0 +1,12 @@
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+-содержит все html элементы и атрибуты, но не включает репрезентативные и устаревшие элементы. наборы фреймов не разрешены. самый строгий дтд-->
+<!DOCTYPE html> <!--doctype html5-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Roadside, Studio, Design, Web, Icons, Logos" />
+<meta name="description" content="Roadside Studio is a web design agency that makes beautiful websites!" />
+<meta name="author" content="Felix Boyeaux" />
+<meta name="robots" content="all" />
+<title>roadside</title>
+<link href="css/roadside.css" rel="stylesheet" type="text/css" title="style"
