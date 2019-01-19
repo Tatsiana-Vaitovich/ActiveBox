@@ -287,7 +287,7 @@
   display: block;
   margin: 1px 1px 0 0;  /*для border*/
   height: 349px; /*350 c вычетом border-top*/
-  background-color: #e84545; 
+  background-color: #e84545;
   border-right: 1px solid #ffffff;
   border-top: 1px solid #ffffff;
   overflow: hidden; 
