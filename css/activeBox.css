@@ -465,10 +465,10 @@
 
 .slider {
   position: relative;
-  overflow: hidden;  /*отображается только область внутри элемента, остальное будет скрыто*/
   z-index: -1;
   width: inherit;
   height: inherit;
+  overflow: hidden;  /*отображается только область внутри элемента, остальное будет скрыто*/
   background-color: #53354a;  /*фон задаем для блока слайдер а не для родительского блока!!!!!*/
 }
 
@@ -649,9 +649,7 @@
 .btn {
   display: block;
   width: 280px;
-  height: 46px;
-  padding-top: 16px;
-  border: none;
+  padding: 16px 0 16px 0;
   font-size: 0.8em;
   font-family: "Raleway SemiBold";
   font-weight: 600;
@@ -661,6 +659,7 @@
   cursor: pointer;
   color: #ffffff;
   background-color: #e84545;
+  border: none;
   -webkit-transition: background-color ease-in-out .5s;
   -moz-transition: background-color ease-in-out .5s;
   -o-transition: background-color ease-in-out .5s;
@@ -686,8 +685,7 @@
 .footer__wrapper {
   display: flex;
   width: 54%;  /*1020px*/
-  margin-right: auto;
-  margin-left: auto;
+  margin: 0 auto 0 auto;
   padding: 65px 0 65px 0;
 }
 
@@ -731,8 +729,7 @@
 }
 
 .footer__caption {
-  margin: 0;
-  margin-bottom: 20px;
+  margin: 0 0 20px 0;
   padding: 0;
   font-size: 0.9em;
   font-family: "Raleway Bold";
