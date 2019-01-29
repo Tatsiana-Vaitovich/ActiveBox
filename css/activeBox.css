@@ -691,22 +691,21 @@
   padding: 65px 0 65px 0;
 }
 
-.footer__wrapper--start {
+.footer__wrapper--overall {
   display: flex;
-  justify-content: flex-start;
   width: 33.33%;
+}
+
+.footer__wrapper--start {
+  justify-content: flex-start;
 }
 
 .footer__wrapper--center {
-  display: flex;
   justify-content: center;
-  width: 33.33%;
 }
 
 .footer__wrapper--end {
-  display: flex;
   justify-content: flex-end;
-  width: 33.33%;
 }
 
 .location {
