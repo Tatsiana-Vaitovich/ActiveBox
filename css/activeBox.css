@@ -456,6 +456,9 @@
   background-color: #53354a;
 }
 
+.slider__input {
+  display: none;
+}
 .clients {
   display: flex;
   height: 500px;
@@ -509,10 +512,30 @@
 }
 .slider__controls {
   display: flex;
+  justify-content: space-between;
   width: 100px;
   height: 10px;
 }
 
+.slider__controls>label {
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  opacity: 0.2;
+  cursor: pointer;
+  -webkit-transition: opacity ease-in-out 1s, filter ease-in-out 1s;  /*переход цвета при наведении курсора плавный, в течении 0.5с по соответствующей кривой безье*/
+  -moz-transition: opacity ease-in-out 1s, filter ease-in-out 1s;
+  -o-transition: opacity ease-in-out 1s, filter ease-in-out 1s;
+  transition: opacity ease-in-out 1s, filter ease-in-out 1s;
+}
+
+.slider__controls>label:hover {
+opacity: 1;
+}
 
 /*donload
   ========================================================================== */
