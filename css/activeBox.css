@@ -67,7 +67,7 @@
 /*header-block
   ========================================================================== */
 
-.header-block {
+.header {
   position: relative;
 }
 
@@ -675,10 +675,10 @@
   background-color: #e72929;
 }
 
-/*footer-block
+/*footer
   ========================================================================== */
 
-.footer-block {
+.footer {
   z-index: -1;
   background-color: #3a3e64;
 }
@@ -695,21 +695,18 @@
   display: flex;
   justify-content: flex-start;
   width: 33.33%;
-
 }
 
 .footer__wrapper--center {
   display: flex;
   justify-content: center;
   width: 33.33%;
-
 }
 
 .footer__wrapper--end {
   display: flex;
   justify-content: flex-end;
   width: 33.33%;
-
 }
 
 .location {
