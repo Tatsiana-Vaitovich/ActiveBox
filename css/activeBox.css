@@ -455,6 +455,7 @@
 .clients-block {
   display: flex;
   height: 500px;
+  background-color: #53354a;
 }
 
 .clients-block__photo {
@@ -463,7 +464,27 @@
 }
 
 .clients-block__text {
-  
+  width: 50%;
+  padding: 105px 375px 175px 80px;
+  text-align: left;
+}
+
+.clients-block__q {
+  font-style: italic;
+  font-size: 2.25em;
+  line-height: 120%;
+  font-family: Cardo;
+  color: #ffffff;
+}
+
+.clients-block__p {
+  margin-top: 40px;
+  font-size: 0.8em;
+  line-height: 160%;
+  font-family: "Raleway Bold";
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
 }
 /*donload
   ========================================================================== */
