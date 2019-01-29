@@ -453,23 +453,44 @@
 /*clients-block
   ========================================================================== */
 .clients-block {
-  display: flex;
-  height: 500px;
   background-color: #53354a;
 }
 
-.clients-block__photo {
+.clients {
+  display: flex;
+  height: 500px;
+}
+.clients__photo {
   width: 50%;
+}
+
+.client1__photo {
   background: url(../img/clients1.jpg)
 }
 
-.clients-block__text {
+.client2__photo {
+  background: url(../img/clients2.jpg)
+}
+
+.client3__photo {
+  background: url(../img/clients3.jpg)
+}
+
+.client4__photo {
+  background: url(../img/clients4.jpg)
+}
+
+.client5__photo {
+  background: url(../img/clients5.jpg)
+}
+
+.clients__text {
   width: 50%;
   padding: 105px 375px 175px 80px;
   text-align: left;
 }
 
-.clients-block__q {
+.clients__text--q {
   font-style: italic;
   font-size: 2.25em;
   line-height: 120%;
@@ -477,8 +498,8 @@
   color: #ffffff;
 }
 
-.clients-block__p {
-  margin-top: 40px;
+.clients__text--p {
+  margin: 40px 0 0 0;
   font-size: 0.8em;
   line-height: 160%;
   font-family: "Raleway Bold";
@@ -486,6 +507,13 @@
   text-transform: uppercase;
   color: #ffffff;
 }
+.slider__controls {
+  display: flex;
+  width: 100px;
+  height: 10px;
+}
+
+
 /*donload
   ========================================================================== */
 
