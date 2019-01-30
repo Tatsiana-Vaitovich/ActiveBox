@@ -456,7 +456,7 @@
   background-color: #53354a;
 }
 
-.slider__input {
+.slider>input {
   display: none;
 }
 .slide {
@@ -527,13 +527,18 @@
   border-radius: 50%;
   opacity: 0.2;
   cursor: pointer;
-  -webkit-transition: opacity ease-in-out 1s, filter ease-in-out 1s;  /*переход цвета при наведении курсора плавный, в течении 0.5с по соответствующей кривой безье*/
-  -moz-transition: opacity ease-in-out 1s, filter ease-in-out 1s;
-  -o-transition: opacity ease-in-out 1s, filter ease-in-out 1s;
-  transition: opacity ease-in-out 1s, filter ease-in-out 1s;
+  -webkit-transition: opacity ease-in-out 0.5s;  /*переход цвета при наведении курсора плавный, в течении 0.5с по соответствующей кривой безье*/
+  -moz-transition: opacity ease-in-out 0.5s;
+  -o-transition: opacity ease-in-out 0.5s;
+  transition: opacity ease-in-out 0.5s;
 }
 
-.slider__btn:hover {
+.slider__btn:hover, 
+#client1:checked~.slider__controls label:nth-of-type(1),
+#client2:checked~.slider__controls label:nth-of-type(2),
+#client3:checked~.slider__controls label:nth-of-type(3),
+#client4:checked~.slider__controls label:nth-of-type(4),
+#client5:checked~.slider__controls label:nth-of-type(5) {
 opacity: 1;
 }
 
