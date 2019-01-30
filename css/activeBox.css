@@ -459,11 +459,11 @@
 .slider__input {
   display: none;
 }
-.clients {
+.slide {
   display: flex;
   height: 500px;
 }
-.clients__photo {
+.slide__photo {
   width: 50%;
 }
 
@@ -487,13 +487,13 @@
   background: url(../img/clients5.jpg)
 }
 
-.clients__text {
+.slide__text {
   width: 50%;
   padding: 105px 375px 175px 80px;
   text-align: left;
 }
 
-.clients__text--q {
+.slide__text--q {
   font-style: italic;
   font-size: 2.25em;
   line-height: 120%;
@@ -501,7 +501,7 @@
   color: #ffffff;
 }
 
-.clients__text--p {
+.slide__text--p {
   margin: 40px 0 0 0;
   font-size: 0.8em;
   line-height: 160%;
@@ -517,7 +517,7 @@
   height: 10px;
 }
 
-.slider__controls>label {
+.slider__btn {
   width: 10px;
   height: 10px;
   background-color: #ffffff;
@@ -533,7 +533,7 @@
   transition: opacity ease-in-out 1s, filter ease-in-out 1s;
 }
 
-.slider__controls>label:hover {
+.slider__btn:hover {
 opacity: 1;
 }
 
