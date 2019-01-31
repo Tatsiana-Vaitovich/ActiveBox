@@ -86,8 +86,8 @@
 }
 
 .logo {
-  width: 16%;
-  padding: 7px 0 7px 0;
+  width: 189px;
+  height: 24px;
   text-indent: -9000px;
   background: url("../img/logo.png") no-repeat left;
 }
@@ -98,15 +98,19 @@
 }
 
 .navigation {
-  width: 55%;
+  width: 50%;
 }
 
+.navigation__list {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
 .navigation__item {  /*item - li*/
   display: inline-block; 
 }
 
 .navigation__link {
-  padding: 17px 5px 17px 35px;
   font-size: 0.8em;
   font-family: "Raleway Bold";
   text-transform: uppercase;
@@ -120,7 +124,6 @@
 
 .masthead {
   min-height: 750px;
-  margin: 0px auto auto;
   padding: 245px 0 140px 0;
   background: url("../img/header-block.png") no-repeat;
   background-color: #313454;
@@ -128,16 +131,13 @@
 
 .masthead__wrapper {
   width: 50%;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 0 auto 0 auto;
 }
 
 .masthead__caption {
   margin: 0;
-  padding: 0;
   font-size: 4em;
   line-height: 110%;
-  font-weight: bold;
   text-transform: uppercase;
   text-align: center;
   color: #ffffff;
@@ -145,7 +145,6 @@
 
 .masthead__info {
   margin: 30px 0 0 0;
-  padding: 0;
   font-size: 1.4em;
   line-height: 150%;
   font-family: "Raleway Regular";
@@ -226,7 +225,6 @@
 
 .feature__caption {
   margin: 30px 0 0 0;
-  padding: 0;
   font-size: 1em;
   text-align: center;
 }
@@ -246,7 +244,6 @@
 
 .info-text {
   margin: 25px 0 0 0;
-  padding: 0;
   font-size: 0.9em;
   line-height: 150%;
   font-family: "Raleway Regular";
@@ -260,9 +257,6 @@
 .works-block {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  align-content: center;
-  text-align: center;
 }
 
 .work {
@@ -293,8 +287,7 @@
 
 .work__img {
   z-index: 1;
-  opacity: 1;  /*прозрачность для firefox*/
-  filter: alpha(opacity=100);  /*прозрачность для IE*/
+  opacity: 1;
   -webkit-transition: opacity ease-in-out .5s, transform ease-in-out .5s;
   -moz-transition: opacity ease-in-out .5s, transform ease-in-out .5s;
   -o-transition: opacity ease-in-out .5s, transform ease-in-out .5s;
@@ -303,7 +296,6 @@
 
 .work__img:hover {
   opacity: 0.1;
-  filter: alpha(opacity=100);
   -webkit-transform: scale(1.2, 1.2);
   -moz-transform: scale(1.2, 1.2);
   -o-transform: scale(1.2, 1.2);
@@ -324,14 +316,10 @@
 .work__thumb-info {
   position: absolute;
   left: 50%;
-  display: block;
-  margin: 0;
-  padding: 0;
   font-size: 0.9em;
   line-height: 150%;
   font-family: "Raleway Bold";
   text-transform: uppercase;
-  text-align: center;
   color: rgba(255, 255, 255, 1);
   transform: translate(-50%, -50%);
 }
@@ -354,8 +342,7 @@
   display: flex;
   justify-content: space-between;
   width: 61.6%;  /*1170px*/
-  margin-right: auto;
-  margin-left: auto;
+  margin: 0 auto 0 auto;
   padding: 100px 0 100px 0;
 }
 
@@ -365,17 +352,15 @@
 
 .team__name {
   margin: 30px 0 0 0;
-  padding: 0;
   font-size: 1.4em;
-  font-weight: 400;
   font-family: "Raleway Regular";
+  font-weight: 400;
   text-align: left;
   color: #2d3033;
 }
 
 .team__position {
   margin: 10px 0 0 0;
-  padding: 0;
   font-size: 0.8em;
   font-family: "Raleway Regular";
   font-weight: 400;
@@ -389,11 +374,12 @@
 
 .team__networks {
   width: 130px;
-  height: 40px;
   margin-top: 25px;
 }
 
 .networks__list {
+  display: flex;
+  justify-content: space-between;
   margin: 0;
   padding: 0;
 }
@@ -607,7 +593,6 @@
 
 .download__caption {
   margin: 0;
-  padding: 0;
   font-size: 1.8em;
   line-height: 75%;
   font-family: "Raleway light";
@@ -618,7 +603,6 @@
 
 .download__text {
   margin: 20px 0 0 0;
-  padding: 0;
   font-size: 0.8em;
   line-height: 160%;
   font-family: "Raleway Bold";
@@ -726,7 +710,6 @@ margin: 15px 0 0 0;
 }
 
 .footer__networks--facebook {
-  margin-right: 5px;
   background: url("../img/sprite1.png") no-repeat 0 0;
 }
 
@@ -735,7 +718,6 @@ margin: 15px 0 0 0;
 }
 
 .footer__networks--twitter {
-  margin-right: 5px;
   background: url("../img/sprite1.png") no-repeat -40px 0;
 }
 
