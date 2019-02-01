@@ -161,10 +161,10 @@
   margin: 70px auto 0 auto;
 }
 
-/*features-block
+/*features
   ========================================================================== */
 
-.features-block {
+.features {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -339,10 +339,10 @@
   text-transform: none;
 }
 
-/*team-block
+/*teams
   ========================================================================== */
 
-.team-block {
+.teams {
   display: flex;
   justify-content: space-between;
   width: 61.6%;  /*1170px*/
