@@ -65,7 +65,7 @@
 }
 
 /*header-block
-  ========================================================================== */
+  ========================================================================= */
 
 .fixed {
   position: fixed;
@@ -84,7 +84,6 @@
 }
 
 .header__wrapper {
-  margin: auto;
   padding: 25px 0 25px 0;
   background: url("../img/border-bottom-header.png") repeat-x bottom;
 }
@@ -255,12 +254,13 @@
   color: #6c7279;
 }
 
-/*works-block
+/*works
   ========================================================================== */
 
-.works-block {
+.works {
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-start;
 }
 
 .work {
@@ -269,33 +269,32 @@
   display: block;
   margin: 1px 1px 0 0;  /*для border*/
   height: 349px; /*350 c вычетом border-top*/
-  background-color: #e84545;
   border-right: 1px solid #ffffff;
   border-top: 1px solid #ffffff;
+  text-decoration: none;
   overflow: hidden; 
 }
 
-.works-block__work1, 
-.works-block__work4, 
-.works-block__work5, 
-.works-block__work8 {
+.works--work1, 
+.works--work4, 
+.works--work5, 
+.works--work8 {
   width: 469px;  /*470px с вычетом border-rignt*/
 }
 
-.works-block__work2, 
-.works-block__work3, 
-.works-block__work6, 
-.works-block__work7 {
+.works--work2, 
+.works--work3, 
+.works--work6, 
+.works--work7 {
   width: 479px;  /*480px с вычетом border-rignt*/
 }
 
 .work__img {
-  z-index: 1;
-  opacity: 1;
-  -webkit-transition: opacity ease-in-out .5s, transform ease-in-out .5s;
-  -moz-transition: opacity ease-in-out .5s, transform ease-in-out .5s;
-  -o-transition: opacity ease-in-out .5s, transform ease-in-out .5s;
-  transition: opacity ease-in-out .5s, transform ease-in-out .5s;
+  position: absolute;
+  -webkit-transition: opacity ease-in-out 1s, transform ease-in-out .5s;
+  -moz-transition: opacity ease-in-out 1s, transform ease-in-out .5s;
+  -o-transition: opacity ease-in-out 1s, transform ease-in-out .5s;
+  transition: opacity ease-in-out 1s, transform ease-in-out .5s;
 }
 
 .work__img:hover {
@@ -307,33 +306,23 @@
 }
 
 .work__thumb {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: -1;  /*чтобы текст ссылки не появлялся сразу - важно, чтобы индекс=-1, т.е размещаем текст за блоком work*/
   height: 100%;
-  width: 100%;
-  transform: translate(-50%, -50%);  /*позиционируем блок внутри родительского блока и внутри себя*/
+  padding-top: 150px;
+  background-color: #e84545;
 }
 
 .work__thumb-caption, 
 .work__thumb-info {
-  position: absolute;
-  left: 50%;
   font-size: 0.9em;
   line-height: 150%;
   font-family: "Raleway Bold";
+  text-align: center;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 1);
-  transform: translate(-50%, -50%);
-}
-
-.work__thumb-caption {
-  top: 45%;
 }
 
 .work__thumb-info {
-  top: 55%;
+  margin-top: 10px;
   font-family: "Raleway Regular";
   font-weight: 400;
   text-transform: none;
