@@ -450,9 +450,9 @@
   background: url("../img/sprite.png") no-repeat -80px -50px;
 }
 
-/*clients-block
+/*clients
   ========================================================================== */
-.clients-block {
+.clients {
   background-color: #53354a;
 }
 
