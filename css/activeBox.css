@@ -459,10 +459,19 @@
 .slider>input {
   display: none;
 }
+
+.slider {
+  position: relative;
+  height: 500px;
+}
+
 .slide {
+  position: absolute;
+
   display: flex;
   height: 500px;
 }
+
 .slide__photo {
   width: 50%;
 }
@@ -548,10 +557,10 @@ opacity: 1;
   -moz-transform: translateX(-1900px);
   -o-transform: translateX(-1900px);
   transform: translateX(-1900px);
-  -webkit-transition: opacity ease-in-out .5s, transform ease-in-out .8s;
-  -moz-transition: opacity ease-in-out .5s, transform ease-in-out .8;
-  -o-transition: opacity ease-in-out .5s, transform ease-in-out .8;
-  transition: opacity ease-in-out .5s, transform ease-in-out .8;
+  -webkit-transition: transform ease-in-out .8s;
+  -moz-transition: transform ease-in-out .8;
+  -o-transition: transform ease-in-out .8;
+  transition: transform ease-in-out .8;
 }
 
 #client1:checked~.slides>.client1,
