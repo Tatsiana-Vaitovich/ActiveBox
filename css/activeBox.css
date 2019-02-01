@@ -75,11 +75,15 @@
   background-color: #313454;
 }
 
-.header {
+.wrap {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 62%;
+  margin: 0 auto 0 auto;
+}
+
+.header__wrapper {
   margin: auto;
   padding: 25px 0 25px 0;
   background: url("../img/border-bottom-header.png") repeat-x bottom;
@@ -651,9 +655,7 @@
 }
 
 .footer__wrapper {
-  display: flex;
-  width: 62%;  /*1020px*/
-  margin: 0 auto 0 auto;
+  align-items: flex-start;
   padding: 60px 0 70px 0;
 }
 
