@@ -247,61 +247,67 @@
     </section>
 
 
-    <section class="clients-block" id="testimonials">
-      <input type="radio" name="slides" id="slide--client1">
-      <input type="radio" name="slides" id="slide--client2" checked>
-      <input type="radio" name="slides" id="slide--client3">
-      <input type="radio" name="slides" id="slide--client4">
-      <input type="radio" name="slides" id="slide--client5">
+    <section class="clients" id="testimonials">
       <div class="slider">
-        <div class="slide slide--client1">
-          <div class="slide__photo slide__photo--client1">
+        <input type="radio" name="slider" id="client1">
+        <input type="radio" name="slider" id="client2" checked>
+        <input type="radio" name="slider" id="client3">
+        <input type="radio" name="slider" id="client4">
+        <input type="radio" name="slider" id="client5">
+        <div class="slides">
+          <div class="slide client1">
+            <div class="slide__photo client1__photo">
+            </div>
+            <div class="slide__text">
+              <q class="slide__text--q">Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo
+                quam...</q>
+              <p class="slide__text--p">Peter Sems, Interaction Designer at XYZ</p>
+            </div>
           </div>
-          <div class="slide__text">
-            <q class="slide__quote">Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo
-              quam...</q>
-            <p class="slide__info">Peter Sems, Interaction Designer at XYZ</p>
+          <div class="slide client2">
+            <div class="slide__photo client2__photo">
+            </div>
+            <div class="slide__text">
+              <q class="slide__text--q">Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo
+                quam...</q>
+              <p class="slide__text--p">Susan Sims, Interaction Designer at XYZ</p>
+            </div>
+          </div>
+          <div class="slide client3">
+            <div class="slide__photo client3__photo">
+            </div>
+            <div class="slide__text">
+              <q class="slide__text--q">Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo
+                quam...</q>
+              <p class="slide__text--p">Peter and Paula Syms, Interaction Designer at XYZ</p>
+            </div>
+          </div>
+          <div class="slide client4">
+            <div class="slide__photo client4__photo">
+            </div>
+            <div class="slide__text">
+              <q class="slide__text--q">Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo
+                quam...</q>
+              <p class="slide__text--p">Anna Sums, Interaction Designer at XYZ</p>
+            </div>
+          </div>
+          <div class="slide client5">
+            <div class="slide__photo client5__photo">
+            </div>
+            <div class="slide__text">
+              <q class="slide__text--q">Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo
+                quam...</q>
+              <p class="slide__text--p">Pen Soms, Interaction Designer at XYZ</p>
+            </div>
           </div>
         </div>
-        <div class="slide slide--client2">
-          <div class="slide__photo slide__photo--client2"></div>
-          <div class="slide__text">
-            <q class="slide__quote">Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo
-              quam...</q>
-            <p class="slide__info">Susan Sims, Interaction Designer at XYZ</p>
-          </div>
+        <div class="slider__controls">
+          <label class="slider__btn" for="client1"></label>
+          <label class="slider__btn" for="client2"></label>
+          <label class="slider__btn" for="client3"></label>
+          <label class="slider__btn" for="client4"></label>
+          <label class="slider__btn" for="client5"></label>
         </div>
-        <div class="slide slide--client3">
-          <div class="slide__photo slide__photo--client3"></div>
-          <div class="slide__text">
-            <q class="slide__quote">Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo
-              quam...</q>
-            <p class="slide__info">Peter and Paula Syms, Interaction Designer at XYZ</p>
-          </div>
-        </div>
-        <div class="slide slide--client4">
-          <div class="slide__photo slide__photo--client4"></div>
-          <div class="slide__text">
-            <q class="slide__quote">Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo
-              quam...</q>
-            <p class="slide__info">Anna Sums, Interaction Designer at XYZ</p>
-          </div>
-        </div>
-        <div class="slide slide--client5">
-          <div class="slide__photo slide__photo--client5"></div>
-          <div class="slide__text">
-            <q class="slide__quote">Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo
-              quam...</q>
-            <p class="slide__info">Pen Soms, Interaction Designer at XYZ</p>
-          </div>
-        </div>
-      </div>
-      <div class="controls">
-        <label for="slide--client1" class="controls__btn"></label><!--С помощью атрибута for связываем каждую подпись с одной из кнопок, это позволит нам красиво оформить их. Не сами радиокнопки, потому что на них, к сожалению, стили не действуют, а лейблы. Связка позволяет сделать так, что при клике на подпись автоматически становится выбранной и радио-кнопка-->
-        <label for="slide--client2" class="controls__btn"></label>
-        <label for="slide--client3" class="controls__btn"></label>
-        <label for="slide--client4" class="controls__btn"></label>
-        <label for="slide--client5" class="controls__btn"></label>
       </div>
     </section>
 
@@ -321,7 +327,7 @@
             <p class="footer__info">3481 Melrose Place Beverly Hills, CA 90210</p>
           </section>
         </div>
-        <div class="footer__wrapper--center">
+        <div class="footer__wrapper--overall footer__wrapper--center">
           <section class="share">
             <h2 class="footer__caption">Share with Love</h2>
             <div class="networks footer__network">

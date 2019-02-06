@@ -423,83 +423,53 @@
   background: url("../img/sprite.png") no-repeat -80px -50px;
 }
 
-/*clients-block
+/*clients
   ========================================================================== */
-
-.clients-block {
-  position: relative;
-  width: 100%;
-  height: 500px;
+.clients {
+  background-color: #53354a;
 }
 
-.clients-block>input {  /*дочерние input родитель clients-bar*/
-  display: none;  /*радио-кнопки скрываем, т.к оформить их нельзя. будем использовать их посредством label*/
+.slider>input {
+  display: none;
 }
 
 .slider {
   position: relative;
-  z-index: -1;
-  width: inherit;
-  height: inherit;
-  overflow: hidden;  /*отображается только область внутри элемента, остальное будет скрыто*/
-  background-color: #53354a;  /*фон задаем для блока слайдер а не для родительского блока!!!!!*/
+  height: 500px;
 }
 
-.slide {
-  position: absolute;
-  z-index: 0;
-  width: inherit;
-  height: inherit;  /*не забываем указывать и высоту блока*/
-  opacity: 0;
-  filter: alpha(opacity=0);
-  -webkit-transform: translateX(-1900px);
-  -moz-transform: translateX(-1900px);
-  -o-transform: translateX(-1900px);
-  transform: translateX(-1900px);
-  -webkit-transition: opacity ease-in-out .5s, transform ease-in-out .8s;
-  -moz-transition: opacity ease-in-out .5s, transform ease-in-out .8;
-  -o-transition: opacity ease-in-out .5s, transform ease-in-out .8;
-  transition: opacity ease-in-out .5s, transform ease-in-out .8;
-}
-
-.slide__photo {
-  position: absolute;
-  display: inline-block;
+.slide__photo,
+.slide__text {
   width: 50%;
-  height: inherit;
 }
 
-.slide__photo--client1 {
-  background-image: url("../img/clients1.jpg");
+.client1__photo {
+  background: url(../img/clients1.jpg)
 }
 
-.slide__photo--client2 {
-  background-image: url("../img/clients2.jpg");
+.client2__photo {
+  background: url(../img/clients2.jpg)
 }
 
-.slide__photo--client3 {
-  background-image: url("../img/clients3.jpg");
+.client3__photo {
+  background: url(../img/clients3.jpg)
 }
 
-.slide__photo--client4 {
-  background-image: url("../img/clients4.jpg");
+.client4__photo {
+  background: url(../img/clients4.jpg)
 }
 
-.slide__photo--client5 {
-  background-image: url("../img/clients5.jpg");
+.client5__photo {
+  background: url(../img/clients5.jpg)
 }
 
 .slide__text {
-  position: absolute;  /*для всех слайдов мы указали абсолютное позиционирование, чтобы можно было играть с эффектами появления*/
-  display: block;
   width: 50%;
-  height: inherit;
-  margin-left: 50%;
   padding: 105px 375px 175px 80px;
   text-align: left;
 }
 
-.slide__quote {
+.slide__text--q {
   font-style: italic;
   font-size: 2.25em;
   line-height: 120%;
@@ -507,9 +477,8 @@
   color: #ffffff;
 }
 
-.slide__info {
-  margin: 0;
-  padding: 30px 0 0 0;
+.slide__text--p {
+  margin: 40px 0 0 0;
   font-size: 0.8em;
   line-height: 160%;
   font-family: "Raleway Bold";
@@ -517,70 +486,62 @@
   color: #ffffff;
 }
 
-.controls {
+.slider__controls {
   position: absolute;
   top: 375px;
   left: 1235px;
   z-index: 2;
-  width: 105px;
+  display: flex;
+  justify-content: space-between;
+  width: 100px;
+  height: 10px;
 }
 
-.controls__btn {
-  position: relative;
-  z-index: 2;
-  display: inline-block;
+.slider__btn {
   width: 12px;
   height: 12px;
-  margin-right: 5px;
   background-color: #ffffff;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -o-border-radius: 50%;
   border-radius: 50%;
   opacity: 0.2;
-  filter: alpha(opacity=20);
   cursor: pointer;
-  -webkit-transition: opacity ease-in-out 1s, filter ease-in-out 1s;  /*переход цвета при наведении курсора плавный, в течении 0.5с по соответствующей кривой безье*/
-  -moz-transition: opacity ease-in-out 1s, filter ease-in-out 1s;
-  -o-transition: opacity ease-in-out 1s, filter ease-in-out 1s;
-  transition: opacity ease-in-out 1s, filter ease-in-out 1s;
+  -webkit-transition: opacity ease-in-out 0.5s;  /*переход цвета при наведении курсора плавный, в течении 0.5с по соответствующей кривой безье*/
+  -moz-transition: opacity ease-in-out 0.5s;
+  -o-transition: opacity ease-in-out 0.5s;
+  transition: opacity ease-in-out 0.5s;
 }
 
-/*мeняем прозрачность кнопок*
-изначально наши кнопки с прозрачностью 20%.
-этим селектором мы говорим браузеру: если кнопка #slide1 выбрана пользователем,
-измени стиль лейблу под номером 1, если выбрана кнопка2 - измени лейбл лейблу под номером 2.
-символ ~ который позволяет выбрать элементы, лежащие за указанным перед ним селектором
-В этом селекторе использовано два псевдокласса, а также символ ~ который позволяет выбрать
-элементы, лежащие за указанным перед ним селектором.
-псевдокласс :checked является одним из нововведений CSS3 и позволяет применять стили
-в зависимости от того, выбрана ли радиокнопка или чекбокс или нет.
-:nth-of-type используется для добавления стиля к элементам указанного типа на основе
-нумерации в дереве элементов
-*/
-
-.controls__btn:hover, 
-#slide--client1:checked~.controls label:nth-of-type(1),  /*сами лейблы без номеров*/
-#slide--client2:checked~.controls label:nth-of-type(2),
-#slide--client3:checked~.controls label:nth-of-type(3),
-#slide--client4:checked~.controls label:nth-of-type(4),
-#slide--client5:checked~.controls label:nth-of-type(5) {
-  opacity: 1;
-  filter: alpha(opacity=100);
-  -webkit-transform: none;
-  -moz-transform: none;
-  -o-transform: none;
-  transform: none;
+.slider__btn:hover, 
+#client1:checked~.slider__controls label:nth-of-type(1),
+#client2:checked~.slider__controls label:nth-of-type(2),
+#client3:checked~.slider__controls label:nth-of-type(3),
+#client4:checked~.slider__controls label:nth-of-type(4),
+#client5:checked~.slider__controls label:nth-of-type(5) {
+opacity: 1;
 }
 
-  /*заставляем слайды работать:*/
+.slide {
+  position: absolute;
+  display: flex;
+  height: 500px;
+  opacity: 0;
+  -webkit-transform: translateX(-1900px);
+  -moz-transform: translateX(-1900px);
+  -o-transform: translateX(-1900px);
+  transform: translateX(-1900px);
+  -webkit-transition: transform ease-in-out .8s;
+  -moz-transition: transform ease-in-out .8;
+  -o-transition: transform ease-in-out .8;
+  transition: transform ease-in-out .8;
+}
 
-#slide--client1:checked~.slider>.slide--client1, 
-#slide--client2:checked~.slider>.slide--client2, 
-#slide--client3:checked~.slider>.slide--client3, 
-#slide--client4:checked~.slider>.slide--client4, 
-#slide--client5:checked~.slider>.slide--client5 {
-  z-index: 1;
+#client1:checked~.slides>.client1,
+#client2:checked~.slides>.client2,
+#client3:checked~.slides>.client3,
+#client4:checked~.slides>.client4,
+#client5:checked~.slides>.client5 {
   opacity: 1;
   -webkit-transform: none;
   -moz-transform: none;
@@ -657,6 +618,10 @@
 .footer__wrapper {
   align-items: flex-start;
   padding: 60px 0 70px 0;
+}
+
+.footer__wrapper--start {
+  justify-content: flex-start;
 }
 
 .footer__wrapper--center {
