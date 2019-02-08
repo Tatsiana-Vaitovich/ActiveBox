@@ -1,5 +1,5 @@
 /*задаем измерение размера блока
-  ========================================================================== */
+========================================================================== */
 
 *, 
 *::before, 
@@ -57,21 +57,23 @@
   ========================================================================== */
 
 .overall {  /*body*/
-  width: 1900px;
-  margin: auto;
+  width: 100%;
   font-size: 100%;  /*16px*/
   font-family: "Open Sans", "Myriad pro", Helvetica, Arial, sans-serif;
   background-color: #ffffff;
 }
 
-/*header-block
+/*header
   ========================================================================= */
-
+.header {
+  background-color: #313454;
+}
+  
 .fixed {
   position: fixed;
   top: 0;
   z-index: 5;
-  width: 1900px;
+  width: 100%;
   background-color: #313454;
 }
 
@@ -122,14 +124,17 @@
   color: rgba(255, 255, 255, 0.75);
 }
 
+.navigation__link:hover {
+  color:  rgb(255, 255, 255);
+}
+
 /*masthead
   ========================================================================== */
 
 .masthead {
   min-height: 750px;
   padding: 245px 0 140px 0;
-  background: url("../img/header-block.png") no-repeat;
-  background-color: #313454;
+  background: url("../img/header-block.png") no-repeat center;
 }
 
 .masthead__wrapper {
@@ -253,33 +258,24 @@
 .works {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 .work {
+  max-width: 100%;
   position: relative;
   z-index: 0;
   display: block;
-  margin: 1px 1px 0 0;  /*для border*/
-  min-height: 349px; /*350 c вычетом border-top*/
+  width: 25%;
+  height: 350px;
   border-right: 1px solid #ffffff;
   border-top: 1px solid #ffffff;
   text-decoration: none;
   overflow: hidden; 
 }
 
-.works--work1, 
-.works--work4, 
-.works--work5, 
-.works--work8 {
-  width: 469px;  /*470px с вычетом border-rignt*/
-}
-
-.works--work2, 
-.works--work3, 
-.works--work6, 
-.works--work7 {
-  width: 479px;  /*480px с вычетом border-rignt*/
+.work__img img {
+  height: auto;
 }
 
 .work__img {
@@ -304,7 +300,7 @@
   justify-content: center;
   align-items: center;
   height: 100%;
-  background-color: #e84545;
+  background-color: rgb(232, 69, 69);
 }
 
 .work__thumb-caption, 
@@ -336,6 +332,11 @@
 
 .team {
   width: 23%;  /*300px*/
+}
+
+.team img {
+  max-width: 100%;
+  height: auto;
 }
 
 .team__name {
@@ -419,7 +420,25 @@
 
 .slider {
   position: relative;
-  height: 500px;
+  min-height: 500px;
+}
+
+.slides {
+  min-height: inherit;
+}
+
+.slide {
+  position: absolute;
+  display: flex;
+  opacity: 0;
+  -webkit-transform: translateX(-1900px);
+  -moz-transform: translateX(-1900px);
+  -o-transform: translateX(-1900px);
+  transform: translateX(-1900px);
+  -webkit-transition: transform ease-in-out .8s;
+  -moz-transition: transform ease-in-out .8;
+  -o-transition: transform ease-in-out .8;
+  transition: transform ease-in-out .8;
 }
 
 .slide__photo,
@@ -427,30 +446,21 @@
   width: 50%;
 }
 
-.client1__photo {
-  background: url(../img/clients1.jpg)
-}
-
-.client2__photo {
-  background: url(../img/clients2.jpg)
-}
-
-.client3__photo {
-  background: url(../img/clients3.jpg)
-}
-
-.client4__photo {
-  background: url(../img/clients4.jpg)
-}
-
-.client5__photo {
-  background: url(../img/clients5.jpg)
+.slide__photo img {
+  max-width: 100%;
 }
 
 .slide__text {
-  width: 50%;
-  padding: 105px 365px 175px 80px;
+  padding-top:105px;
+  padding-left: 8.4%;
+  padding-bottom: 175px;
   text-align: left;
+}
+
+.slide__text--p,
+.slide__text--q {
+  display: block;
+  width: 53%;
 }
 
 .slide__text--q {
@@ -472,8 +482,8 @@
 
 .slider__controls {
   position: absolute;
-  top: 380px;
-  left: 1235px;
+  top: 76%;
+  left: 65%;
   z-index: 2;
   display: flex;
   justify-content: space-between;
@@ -504,21 +514,6 @@
 #client4:checked~.slider__controls label:nth-of-type(4),
 #client5:checked~.slider__controls label:nth-of-type(5) {
 opacity: 1;
-}
-
-.slide {
-  position: absolute;
-  display: flex;
-  height: 500px;
-  opacity: 0;
-  -webkit-transform: translateX(-1900px);
-  -moz-transform: translateX(-1900px);
-  -o-transform: translateX(-1900px);
-  transform: translateX(-1900px);
-  -webkit-transition: transform ease-in-out .8s;
-  -moz-transition: transform ease-in-out .8;
-  -o-transition: transform ease-in-out .8;
-  transition: transform ease-in-out .8;
 }
 
 #client1:checked~.slides>.client1,
@@ -586,7 +581,7 @@ opacity: 1;
 }
 
 .btn:hover {
-  background-color: #e72929;
+  background-color: #e52e2e;
 }
 
 /*footer
