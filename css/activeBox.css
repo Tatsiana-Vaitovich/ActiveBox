@@ -274,10 +274,6 @@
   overflow: hidden; 
 }
 
-.work__img img {
-  height: auto;
-}
-
 .work__img {
   position: absolute;
   -webkit-transition: opacity ease-in-out 1s, transform ease-in-out .5s;
