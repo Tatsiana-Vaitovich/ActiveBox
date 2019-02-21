@@ -582,7 +582,9 @@ opacity: 1;
 .download__btn {
   width: 280px;
   margin: 35px auto 0 auto;
-
+  animation-name: btn;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
 }
 
 .btn:hover {
@@ -696,3 +698,31 @@ opacity: 1;
   height: 15px;
   background: url(../img/heard.png) no-repeat;
 }
+
+@keyframes btn {
+  0% {
+   transform: rotate(0deg) scale(0.7);
+  }
+  20% {
+    transform: rotate(0deg) scale(0.8);
+  }
+  40% {
+    transform: rotate(0deg) scale(0.9);
+  }
+  50% {
+    transform: rotate(8deg) scale(1);
+  }
+  60% {
+    transform: rotate(-8deg) scale(1.2);
+  }
+  75%, 90% {
+    transform: rotate(8deg) scale(1);
+  }
+  80%, 95% {
+    transform: rotate(-8deg) scale(1);
+  }
+  70%, 85%, 100% {
+    transform: rotate(0deg) scale(1);
+  }
+}
+
