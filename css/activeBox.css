@@ -262,7 +262,6 @@
 }
 
 .work {
-  max-width: 100%;
   position: relative;
   z-index: 0;
   display: block;
@@ -276,6 +275,8 @@
 
 .work__img {
   position: absolute;
+  max-width: 650px;
+  max-height: 350px;
   -webkit-transition: opacity ease-in-out 1s, transform ease-in-out .5s;
   -moz-transition: opacity ease-in-out 1s, transform ease-in-out .5s;
   -o-transition: opacity ease-in-out 1s, transform ease-in-out .5s;
@@ -778,6 +779,20 @@ opacity: 1;
     background-color: #e84545;
   }
 
+  .work {
+    width: 50%;
+  }
+
+  .feature {
+    width: 45%;
+  }
+
+  .feature--design::before {
+    margin-top: 48px;
+}
+
+  
+
   /*уменьшаю размер шрифтов*/
 
   .masthead__caption {
@@ -795,33 +810,25 @@ opacity: 1;
 
 @media screen and (max-width: 768px) {
 
-  .feature {
-    width: 45%;
-  }
-
-  .feature--design::before {
-    margin-top: 48px;
-}
-
 /*padding*/
 
 @media screen and (max-width: 640px) {
-
+  
 }
 
 @media screen and (max-width: 480px) {
 
-  .feature {
+  .feature,
+  .work {
     width: 100%;
-  }
+    }
 
   .feature--responsive::before,
   .feature--design::before, 
   .feature--code::before,
   .feature--ready::before {
     margin-top: 35px;
-}
-
+  }
 }
 
 @media screen and (max-width: 320px) {
