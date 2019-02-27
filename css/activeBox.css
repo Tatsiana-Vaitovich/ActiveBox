@@ -124,7 +124,8 @@
   color: rgba(255, 255, 255, 0.75);
 }
 
-.navigation__link:hover {
+.navigation__link:hover,
+.navigation__link:focus {
   color:  rgb(255, 255, 255);
 }
 
@@ -282,7 +283,8 @@
   transition: opacity ease-in-out 1s, transform ease-in-out .5s;
 }
 
-.work__img:hover {
+.work__img:hover,
+.work__img:focus {
   opacity: 0.1;
   -webkit-transform: scale(1.2, 1.2);
   -moz-transform: scale(1.2, 1.2);
@@ -387,7 +389,8 @@
   background: url("../img/sprite.png") no-repeat 0 0;
 }
 
-.team__networks--facebook:hover {
+.team__networks--facebook:hover,
+.team__networks--facebook:focus {
   background: url("../img/sprite.png") no-repeat 0 -50px;
 }
 
@@ -395,7 +398,8 @@
   background: url("../img/sprite.png") no-repeat -40px 0;
 }
 
-.team__networks--twitter:hover {
+.team__networks--twitter:hover,
+.team__networks--twitter:focus {
   background: url("../img/sprite.png") no-repeat -40px -50px;
 }
 
@@ -403,7 +407,8 @@
   background: url("../img/sprite.png") no-repeat -80px 0;
 }
 
-.team__networks--linkedin:hover {
+.team__networks--linkedin:hover,
+.team__networks--linkedin:focus {
   background: url("../img/sprite.png") no-repeat -80px -50px;
 }
 
@@ -505,6 +510,7 @@
 }
 
 .slider__btn:hover, 
+.slider__btn:focus,
 #client1:checked~.slider__controls label:nth-of-type(1),
 #client2:checked~.slider__controls label:nth-of-type(2),
 #client3:checked~.slider__controls label:nth-of-type(3),
@@ -576,7 +582,8 @@ opacity: 1;
   margin: 35px auto 0 auto;
 }
 
-.btn:hover {
+.btn:hover,
+.btn:focus {
   background-color: #e52e2e;
 }
 
@@ -620,7 +627,8 @@ opacity: 1;
   color: rgba(255, 255, 255, 1);
 }
 
-.footer__link:hover {
+.footer__link:hover,
+.footer__link:focus {
   color: #e84545;
 }
 
@@ -652,7 +660,8 @@ opacity: 1;
   background: url("../img/sprite1.png") no-repeat 0 0;
 }
 
-.footer__networks--facebook:hover {
+.footer__networks--facebook:hover,
+.footer__networks--facebook:focus {
   background: url("../img/sprite.png") no-repeat 0 -50px;
 }
 
@@ -668,7 +677,8 @@ opacity: 1;
   background: url("../img/sprite1.png") no-repeat -80px 0;
 }
 
-.footer__networks--linkedin:hover {
+.footer__networks--linkedin:hover,
+.footer__networks--linkedin:focus {
   background: url("../img/sprite.png") no-repeat -80px -50px;
 }
 
@@ -814,7 +824,8 @@ opacity: 1;
     overflow: hidden;
   }
 
-  .navigation:hover {
+  .navigation:hover,
+  .navigation:focus {
     width: auto;
     height: auto;
   }
