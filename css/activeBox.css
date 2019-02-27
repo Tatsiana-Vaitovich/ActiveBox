@@ -720,13 +720,18 @@ opacity: 1;
     padding: 0;
   }
 
+  .slide__photo {
+    text-align: center;
+  }
+
   .slide__photo img {
     max-width: 65%;
   }
 
   .slider__controls {
-    left: 80%;
     top: 90%;
+    left: 50%;
+    transform: translatex(-50%);
   }
 
 /*раскрывающееся меню*/
@@ -821,7 +826,6 @@ opacity: 1;
 @media screen and (max-width: 640px) {
   
 }
-
 @media screen and (max-width: 480px) {
 
   .feature,
@@ -834,8 +838,6 @@ opacity: 1;
   .team:nth-child(2) {
     margin-top: 20px;
   }
-}
-
 
 @media screen and (max-width: 320px) {
 
