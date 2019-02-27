@@ -223,7 +223,6 @@
   background: url("../img/feature6.png") no-repeat;
 }
 
-
 .feature__caption {
   margin: 30px 0 0 0;
   font-size: 1em;
@@ -530,7 +529,7 @@ opacity: 1;
   ========================================================================== */
 
 .download {
-  padding: 100px 0 100px 0;
+  padding: 95px 0 100px 0;
 }
 
 .download__caption {
@@ -544,7 +543,7 @@ opacity: 1;
 }
 
 .download__text {
-  margin: 17px 0 0 0;
+  margin: 8px 0 0 0;
   font-size: 0.8em;
   line-height: 160%;
   font-family: "Raleway Bold";
@@ -575,7 +574,6 @@ opacity: 1;
 .download__btn {
   width: 280px;
   margin: 35px auto 0 auto;
-
 }
 
 .btn:hover {
@@ -685,7 +683,7 @@ opacity: 1;
   margin: auto;
 }
 
-.copyright__link::before {
+.copyright__info span::before {
   content: "";
   display: inline-block;
   width: 15px;
@@ -705,23 +703,21 @@ opacity: 1;
 }
 
 @media screen and (max-width: 1200px) {
-.masthead,
-.features,
-.teams,
-.download,
-.footer__wrapper,
-.copyright p {
-  width: 90%;
-  margin: 0 auto;
-}
+  .masthead,
+  .features,
+  .teams,
+  .download,
+  .footer__wrapper,
+  .copyright p {
+    width: 90%;
+    margin: 0 auto;
+  }
 }
 
-@media screen and (max-width: 1020px) {
-   
+@media screen and (max-width: 1020px) {  
 }
 
 @media screen and (max-width: 960px) {
-  
 /*слайдшоу в 1 колонку*/
 
   .slide {
@@ -743,11 +739,19 @@ opacity: 1;
     max-width: 65%;
   }
 
+  .slide__text--p {
+    width: 40%;
+    margin-top: 10px;
+    margin-left: 60%;
+  }
+
   .slider__controls {
     top: 90%;
     left: 50%;
     transform: translatex(-50%);
   }
+
+/*.work, .feature, .team в 2 колонки*/
 
   .work {
     width: 50%;
@@ -780,10 +784,19 @@ opacity: 1;
   .download__caption {
     font-size: 1.5em;
   }
+
+/*уменьшаю padding*/
+
+.features,
+.teams,
+.download,
+.footer__wrapper {
+  padding: 50px 0;
+  }
 }
 
-@media screen and (max-width: 768px) {
 
+@media screen and (max-width: 768px) {
   /*раскрывающееся меню*/
 
   .logo {
@@ -818,7 +831,7 @@ opacity: 1;
     display: block;
   }
 
-  .navigation__item {  /*item - li*/
+  .navigation__item {
     display: block; 
   }
 
@@ -831,21 +844,10 @@ opacity: 1;
     border-radius: 5px;
     background-color: #e84545;
   }
-
-/*уменьшаю padding*/
-
-  .features,
-  .teams,
-  .download,
-  .footer__wrapper {
-    padding: 50px 0;
-  }
 }
 
 @media screen and (max-width: 640px) {
-  
-}
-@media screen and (max-width: 480px) {
+/*.work, .feature, .team, .footer в 1 колонку*/
 
   .feature,
   .work,
@@ -855,13 +857,15 @@ opacity: 1;
   }
 
   .feature:nth-child(2)::before,
-  .team:nth-child(2)
+  .team:nth-child(2),
   .footer__wrapper--center:nth-child(2),
   .footer__wrapper--center:nth-child(3) {
     margin-top: 20px;
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 480px) {
+}
 
+@media screen and (max-width: 320px) {
 }
