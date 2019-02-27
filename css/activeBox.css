@@ -323,9 +323,11 @@
 .teams {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   max-width: 1170px;  /*61.6%*/
   margin: 0 auto 0 auto;
   padding: 103px 0 103px 0;
+  text-align: center;
 }
 
 .team {
@@ -783,17 +785,21 @@ opacity: 1;
     width: 50%;
   }
 
-  .feature {
+  .feature,
+  .team {
     width: 45%;
   }
 
-  .feature--design::before {
-    margin-top: 48px;
-}
+  .feature:nth-child(3)::before, 
+  .feature:nth-child(4)::before,
+  .feature:nth-child(5)::before,
+  .feature:nth-child(6)::before,
+  .team:nth-child(3),
+  .team:nth-child(4) {
+    margin-top: 20px;
+  }
 
-  
-
-  /*уменьшаю размер шрифтов*/
+/*уменьшаю размер шрифтов*/
 
   .masthead__caption {
     font-size: 2em;
@@ -819,17 +825,17 @@ opacity: 1;
 @media screen and (max-width: 480px) {
 
   .feature,
-  .work {
+  .work,
+  .team {
     width: 100%;
-    }
+  }
 
-  .feature--responsive::before,
-  .feature--design::before, 
-  .feature--code::before,
-  .feature--ready::before {
-    margin-top: 35px;
+  .feature:nth-child(2)::before,
+  .team:nth-child(2) {
+    margin-top: 20px;
   }
 }
+
 
 @media screen and (max-width: 320px) {
 
