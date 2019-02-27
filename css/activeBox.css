@@ -705,9 +705,6 @@ opacity: 1;
 @media screen and (max-width: 960px) {
   
 /*слайдшоу в 1 колонку*/
-  .clients {
-    height: 500px;
-  }
 
   .slide {
     flex-direction: column;
@@ -780,6 +777,21 @@ opacity: 1;
     border-radius: 5px;
     background-color: #e84545;
   }
+
+  /*уменьшаю размер шрифтов*/
+
+  .masthead__caption {
+    font-size: 2em;
+  }
+
+  .slide__text--q {
+    font-size: 1.5em;
+  }
+
+  .download__caption {
+    font-size: 1.5em;
+  }
+}
 
 @media screen and (max-width: 768px) {
 
