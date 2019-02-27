@@ -79,7 +79,7 @@
 
 .wrap {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   max-width: 1178px; /*62%*/
   margin: 0 auto 0 auto;
@@ -91,7 +91,7 @@
 }
 
 .logo {
-  width: 50%;
+  width: 189px;
   height: 24px;
   text-indent: -9000px;
   background: url("../img/logo.png") no-repeat left;
@@ -704,8 +704,20 @@ opacity: 1;
   }
 }
 
-@media screen and (max-width: 1020px) {
+@media screen and (max-width: 1200px) {
+.masthead,
+.features,
+.teams,
+.download,
+.footer__wrapper,
+.copyright p {
+  width: 90%;
+  margin: 0 auto;
+}
+}
 
+@media screen and (max-width: 1020px) {
+   
 }
 
 @media screen and (max-width: 960px) {
@@ -737,11 +749,42 @@ opacity: 1;
     transform: translatex(-50%);
   }
 
-/*раскрывающееся меню*/
-
-  .wrap {
-    justify-content: space-around;
+  .work {
+    width: 50%;
   }
+
+  .feature,
+  .team {
+    width: 45%;
+  }
+
+  .feature:nth-child(3)::before, 
+  .feature:nth-child(4)::before,
+  .feature:nth-child(5)::before,
+  .feature:nth-child(6)::before,
+  .team:nth-child(3),
+  .team:nth-child(4) {
+    margin-top: 20px;
+  }
+
+/*уменьшаю размер шрифтов*/
+
+  .masthead__caption {
+    font-size: 2em;
+  }
+
+  .slide__text--q {
+    font-size: 1.5em;
+  }
+
+  .download__caption {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  /*раскрывающееся меню*/
 
   .logo {
     display: block;
@@ -789,42 +832,15 @@ opacity: 1;
     background-color: #e84545;
   }
 
-  .work {
-    width: 50%;
-  }
+/*уменьшаю padding*/
 
-  .feature,
-  .team {
-    width: 45%;
-  }
-
-  .feature:nth-child(3)::before, 
-  .feature:nth-child(4)::before,
-  .feature:nth-child(5)::before,
-  .feature:nth-child(6)::before,
-  .team:nth-child(3),
-  .team:nth-child(4) {
-    margin-top: 20px;
-  }
-
-/*уменьшаю размер шрифтов*/
-
-  .masthead__caption {
-    font-size: 2em;
-  }
-
-  .slide__text--q {
-    font-size: 1.5em;
-  }
-
-  .download__caption {
-    font-size: 1.5em;
+  .features,
+  .teams,
+  .download,
+  .footer__wrapper {
+    padding: 50px 0;
   }
 }
-
-@media screen and (max-width: 768px) {
-
-/*padding*/
 
 @media screen and (max-width: 640px) {
   
@@ -844,6 +860,7 @@ opacity: 1;
   .footer__wrapper--center:nth-child(3) {
     margin-top: 20px;
   }
+}
 
 @media screen and (max-width: 320px) {
 
