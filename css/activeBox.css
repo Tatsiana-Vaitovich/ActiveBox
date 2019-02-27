@@ -536,7 +536,7 @@ opacity: 1;
 .download__caption {
   margin: 0;
   font-size: 1.8em;
-  line-height: 75%;
+  line-height: 130%;
   font-family: "Raleway light";
   font-weight: normal;
   text-align: center;
@@ -591,14 +591,17 @@ opacity: 1;
 }
 
 .footer__wrapper {
-  align-items: flex-start;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;  
+  flex-wrap: wrap;
   padding: 58px 0 70px 0;
 }
 
 .footer__wrapper--center {
   display: flex;
-  width: 33.33%;
   justify-content: center;
+  width: 33.33%;
 }
 
 .location {
@@ -830,12 +833,15 @@ opacity: 1;
 
   .feature,
   .work,
-  .team {
+  .team,
+  .footer__wrapper--center {
     width: 100%;
   }
 
   .feature:nth-child(2)::before,
-  .team:nth-child(2) {
+  .team:nth-child(2)
+  .footer__wrapper--center:nth-child(2),
+  .footer__wrapper--center:nth-child(3) {
     margin-top: 20px;
   }
 
