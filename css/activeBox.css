@@ -795,13 +795,32 @@ opacity: 1;
 
 @media screen and (max-width: 768px) {
 
+  .feature {
+    width: 45%;
+  }
+
+  .feature--design::before {
+    margin-top: 48px;
 }
+
+/*padding*/
 
 @media screen and (max-width: 640px) {
 
 }
 
 @media screen and (max-width: 480px) {
+
+  .feature {
+    width: 100%;
+  }
+
+  .feature--responsive::before,
+  .feature--design::before, 
+  .feature--code::before,
+  .feature--ready::before {
+    margin-top: 35px;
+}
 
 }
 
