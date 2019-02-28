@@ -868,6 +868,24 @@ opacity: 1;
   .navigation__label:focus {
     cursor: pointer;
   }
+
+  .navigation__label:active {
+    animation-name: menu;
+    animation-duration: 0.2s;
+    animation-timing-function: ease-in-out;
+  }
+
+  @keyframes menu {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(0.8);
+    }
+    100% {
+      transform: scale(1)
+    }
+  }
   
   .navigation__label~.navigation__list {
     display: none;
