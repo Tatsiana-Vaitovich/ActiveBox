@@ -581,14 +581,14 @@ opacity: 1;
   -moz-transition: background-color ease-in-out .5s;
   -o-transition: background-color ease-in-out .5s;
   transition: background-color ease-in-out .5s;
+  animation-name: btn;
+  animation-duration: .7s;
+  animation-timing-function: ease-in-out;
 }
 
 .download__btn {
   width: 280px;
   margin: 35px auto 0 auto;
-  animation-name: btn;
-  animation-duration: 1s;
-  animation-timing-function: ease-in-out;
 }
 
 .btn:hover,
@@ -839,13 +839,10 @@ opacity: 1;
 .footer__wrapper {
   padding: 50px 0;
   }
-}
 
+   /*раскрывающееся меню*/
 
-@media screen and (max-width: 768px) {
-  /*раскрывающееся меню*/
-
-  .logo {
+   .logo {
     display: block;
     width: 100%;
   }
@@ -931,6 +928,10 @@ opacity: 1;
   #menu:checked~.navigation__label {
     background: url("../img/menu.png") no-repeat 0 -40px;
   }
+}
+
+@media screen and (max-width: 768px) {
+ 
 }
 
 @media screen and (max-width: 640px) {
