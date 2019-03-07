@@ -102,11 +102,11 @@
   padding: 0;
 }
 
-.navigation {
+.navigation__wrap {
   width: 50%;
 }
 
-.navigation>input,
+.navigation__wrap>input,
 .navigation__label>span {
   display: none;
 }
@@ -749,7 +749,7 @@ opacity: 1;
 }
 
 @media screen and (max-width: 1200px) {
-  .masthead,
+/*  .masthead,
   .features,
   .teams,
   .download,
@@ -757,7 +757,7 @@ opacity: 1;
   .copyright p {
     width: 90%;
     margin: 0 auto;
-  }
+  }*/
 }
 
 @media screen and (max-width: 1020px) {  
@@ -839,41 +839,36 @@ opacity: 1;
 .footer__wrapper {
   padding: 50px 0;
   }
+}
 
-   /*раскрывающееся меню*/
+@media screen and (max-width: 768px) {
+  /*раскрывающееся меню*/
 
-   .logo {
+  .logo {
     display: block;
     width: 100%;
+    margin-left: 5%;
   }
 
   .navigation {
-    width: 30px;
-    height: 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
   }
   
-  .navigation__list,
-  .navigation__item {
-    display: block;
-  }
-  
-  .navigation__link {
-    font-size: 0.8em;
-    font-family: "Raleway Bold";
-    text-transform: uppercase;
-    text-decoration: none;
-    cursor: pointer;
-    color: rgba(255, 255, 255, 0.75);
+  .navigation__list {
+    display: flex;
   }
   
   .navigation__link {
     display: block;
-    width: 120px;
-    margin-top: 5px;
-    padding: 5px 10px;
-    border: 1px solid #ffffff;
-    border-radius: 5px;
-    background-color: #e84545;
+    font-size: 1.5625em;
+    line-height: 1.8em;
+    text-align: center;
   }
   
   .navigation__link:hover,
@@ -882,12 +877,12 @@ opacity: 1;
    }
   
    .navigation__label {
-    position: absolute;
     display: block;
-    top: 23px;
-    right: 5%; 
     width: 30px;
-    height: 30px;
+    min-height: 30px;
+    margin-top: 21px;
+    margin-left: auto;
+    margin-right: 5%;
     background: url("../img/menu.png") no-repeat;
   }
   
@@ -917,21 +912,22 @@ opacity: 1;
   .navigation__label~.navigation__list {
     display: none;
   }
-  
-  #menu:checked~.navigation__list {
-    position: absolute;
-    top: 78px;
-    right: 10px;
-    display: block;
+
+  #menu:checked~.navigation {
+    background-color: rgba(0, 0, 0, .8);
   }
 
-  #menu:checked~.navigation__label {
+  #menu:checked~.navigation>.navigation__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  #menu:checked~.navigation>.navigation__label {
     background: url("../img/menu.png") no-repeat 0 -40px;
   }
-}
-
-@media screen and (max-width: 768px) {
- 
 }
 
 @media screen and (max-width: 640px) {
