@@ -58,6 +58,7 @@
 
 .overall {  /*body*/
   width: 100%;
+  min-width: 320px;
   font-size: 100%;  /*16px*/
   font-family: "Open Sans", "Myriad pro", Helvetica, Arial, sans-serif;
   background-color: #ffffff;
@@ -755,7 +756,7 @@ opacity: 1;
   }
 
   .clients {
-    height: 400px;
+    height: 500px;
   }
 
   .slider__controls {
@@ -777,35 +778,51 @@ opacity: 1;
 @media screen and (max-width: 960px) {
 /*слайдшоу в 1 колонку*/
 
+  .clients {
+    height: 500px;
+  }
+
+  .slider {
+    position: relative;
+    height: inherit;
+  }
+
+  .slides {
+    height: 450px;
+  }
+
   .slide {
+    position: absolute;
+    display: flex;
     flex-direction: column;
     justify-content: center;
+    height: 450px;
   }
 
-  .slide__photo, 
-  .slide__text {
-    width: 80%;
-    padding: 0;
-  }
-
-  .slide__photo {
+  .slide__photo { 
+    width: 100%;
     text-align: center;
   }
 
-  .slide__photo img {
-    max-width: 65%;
+  .slide__text {
+    width: 100%; 
+    height: auto;
   }
 
-  .slide__text--p {
-    width: 40%;
-    margin-top: 10px;
-    margin-left: 60%;
+  .slide__photo img {
+    max-width: 70%;
+  }
+
+  .slide__text {
+    padding: 0 5%;
+    text-align: left;
   }
 
   .slider__controls {
-    top: 90%;
+    position: relative;
+    top: 0;
     left: 50%;
-    transform: translatex(-50%);
+    transform: translate(-50%, 50%);
   }
 
 /*.work, .feature, .team в 2 колонки*/
@@ -844,15 +861,15 @@ opacity: 1;
 
 /*уменьшаю padding*/
 
-.features,
-.teams,
-.download,
-.footer__wrapper {
-  padding: 50px 0;
+  .features,
+  .teams,
+  .download,
+  .footer__wrapper {
+    padding: 50px 0;
   }
 
-.masthead__wrapper {
-  max-width: 90%;
+  .masthead__wrapper {
+    max-width: 90%;
   }
 }
 
@@ -891,9 +908,9 @@ opacity: 1;
   .navigation__link:hover,
   .navigation__link:focus {
     color:  rgb(255, 255, 255);
-   }
+  }
   
-   .navigation__label {
+  .navigation__label {
     display: block;
     width: 30px;
     min-height: 30px;
