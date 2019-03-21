@@ -5,7 +5,9 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>ActiveBox</title>
-    <link href="css/style.css" rel="stylesheet" title="style">
+    <link href="css/normalize.css" rel="stylesheet" title="style">
+    <link href="css/activeBox.css" rel="stylesheet" title="style">
+    <meta name="viewport" content="width=device-width">
   </head>
 
 
@@ -18,24 +20,28 @@
           <div class="logo">
             <h1 class="logo__caption1">ActiveBox</h1>
           </div>
-          <div class="navigation">
-            <ul class="navigation__list">
-              <li class="navigation__item">
-                <a class="navigation__link" href="#features">Features</a>
-              </li>
-              <li class="navigation__item">
-                <a class="navigation__link" href="#works">Works</a>
-              </li>
-              <li class="navigation__item">
-                <a class="navigation__link" href="#team">Our Team</a>
-              </li>
-              <li class="navigation__item">
-                <a class="navigation__link" href="#testimonials">Testimonials</a>
-              </li>
-              <li class="navigation__item">
-                <a class="navigation__link" href="#download">Download</a>
-              </li>
-            </ul>
+          <div class="navigation__wrap">
+            <input type="checkbox" name="slider" id="menu">
+            <div class="navigation">
+              <label class="navigation__label" for="menu"><span>menu</span></label>
+              <ul class="navigation__list">
+                <li class="navigation__item">
+                  <a class="navigation__link" href="#features">Features</a>
+                </li>
+                <li class="navigation__item">
+                  <a class="navigation__link" href="#works">Works</a>
+                </li>
+                <li class="navigation__item">
+                  <a class="navigation__link" href="#team">Our Team</a>
+                </li>
+                <li class="navigation__item">
+                  <a class="navigation__link" href="#testimonials">Testimonials</a>
+                </li>
+                <li class="navigation__item">
+                  <a class="navigation__link" href="#download">Download</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </section>
       </div>
@@ -54,46 +60,58 @@
 
     <section class="features" id="features">
       <section class="feature feature--customised">
-        <h2 class="feature__caption">
-          <a class="feature__link" href="#">Easily Customised</a>
-        </h2>
-        <p class="info-text feature__info">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu
-          leo. Donec ullamcorper nulla non metus aucto</p>
+        <div class="feature__text">
+          <h2 class="feature__caption">
+            <a class="feature__link" href="#">Easily Customised</a>
+          </h2>
+          <p class="info-text feature__info">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu
+            leo. Donec ullamcorper nulla non metus aucto</p>
+        </div>
       </section>
       <section class="feature feature--responsive">
-        <h2 class="feature__caption">
-          <a class="feature__link" href="#">Responsive Ready</a>
-        </h2>
-        <p class="info-text feature__info">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu
-          leo. Donec ullamcorper nulla non metus aucto</p>
+        <div class="feature__text">
+          <h2 class="feature__caption">
+            <a class="feature__link" href="#">Responsive Ready</a>
+          </h2>
+          <p class="info-text feature__info">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu
+            leo. Donec ullamcorper nulla non metus aucto</p>
+        </div>
       </section>
       <section class="feature feature--design">
-        <h2 class="feature__caption">
-          <a class="feature__link" href="#">Modern Design</a>
-        </h2>
-        <p class="info-text feature__info">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu
-          leo. Donec ullamcorper nulla non metus aucto</p>
+        <div class="feature__text">
+          <h2 class="feature__caption">
+            <a class="feature__link" href="#">Modern Design</a>
+          </h2>
+          <p class="info-text feature__info">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu
+            leo. Donec ullamcorper nulla non metus aucto</p>
+        </div>
       </section>
       <section class="feature feature--code">
-        <h2 class="feature__caption">
-          <a class="feature__link" href="#">Clean Code</a>
-        </h2>
-        <p class="info-text feature__info">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu
-          leo. Donec ullamcorper nulla non metus aucto</p>
+        <div class="feature__text">
+          <h2 class="feature__caption">
+            <a class="feature__link" href="#">Clean Code</a>
+          </h2>
+          <p class="info-text feature__info">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu
+            leo. Donec ullamcorper nulla non metus aucto</p>
+        </div>
       </section>
       <section class="feature feature--ready">
-        <h2 class="feature__caption">
-          <a class="feature__link" href="#">Ready to Ship</a>
-        </h2>
-        <p class="info-text feature__info">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu
-          leo. Donec ullamcorper nulla non metus aucto</p>
+        <div class="feature__text">
+          <h2 class="feature__caption">
+            <a class="feature__link" href="#">Ready to Ship</a>
+          </h2>
+          <p class="info-text feature__info">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu
+            leo. Donec ullamcorper nulla non metus aucto</p>
+        </div>
       </section>
       <section class="feature feature--download">
-        <h2 class="feature__caption">
-          <a class="feature__link" href="#">Download for Free</a>
-        </h2>
-        <p class="info-text feature__info">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu
-          leo. Donec ullamcorper nulla non metus aucto</p>
+        <div class="feature__text">
+          <h2 class="feature__caption">
+            <a class="feature__link" href="#">Download for Free</a>
+          </h2>
+          <p class="info-text feature__info">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu
+            leo. Donec ullamcorper nulla non metus aucto</p>
+        </div>
       </section>
     </section>
 
@@ -178,86 +196,94 @@
     <section class="teams" id="team">
       <div class="team">
         <img src="img/team1.jpg" alt="Ruth Woods">
-        <h2 class="team__name">Ruth Woods</h2>
-        <p class="team__position">Founder, CEO</p>
-        <p class="info-text team__info">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet
-          risus. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam quis risus eget urna mollis
-          ornare vel eu leo.</p>
-        <div class="networks team__networks">
-          <ul class="networks__list">
-            <li class="networks__item">
-              <a href="#" class="networks__link team__networks--facebook">facebook</a>
-            </li>
-            <li class="networks__item">
-              <a href="#" class="networks__link team__networks--twitter">twitter</a>
-            </li>
-            <li class="networks__item">
-              <a href="#" class="networks__link team__networks--linkedin">linkedin</a>
-            </li>
-          </ul>
+        <div class="team__text">
+          <h2 class="team__name">Ruth Woods</h2>
+          <p class="team__position">Founder, CEO</p>
+          <p class="info-text team__info">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet
+            risus. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam quis risus eget urna mollis
+            ornare vel eu leo.</p>
+          <div class="networks team__networks">
+            <ul class="networks__list">
+              <li class="networks__item">
+                <a href="#" class="networks__link team__networks--facebook">facebook</a>
+              </li>
+              <li class="networks__item">
+                <a href="#" class="networks__link team__networks--twitter">twitter</a>
+              </li>
+              <li class="networks__item">
+                <a href="#" class="networks__link team__networks--linkedin">linkedin</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
       <div class="team">
         <img src="img/team2.jpg" alt="Timothy Reed">
-        <h2 class="team__name">Timothy Reed</h2>
-        <p class="team__position">Co-Founder, Developer</p>
-        <p class="info-text team__info">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet
-          risus. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam quis risus eget urna mollis
-          ornare vel eu leo.</p>
-        <div class="networks team__networks">
-          <ul class="networks__list">
-            <li class="networks__item">
-              <a href="#" class="networks__link team__networks--facebook">facebook</a>
-            </li>
-            <li class="networks__item">
-              <a href="#" class="networks__link team__networks--twitter">twitter</a>
-            </li>
-            <li class="networks__item">
-              <a href="#" class="networks__link team__networks--linkedin">linkedin</a>
-            </li>
-          </ul>
+        <div class="team__text">
+          <h2 class="team__name">Timothy Reed</h2>
+          <p class="team__position">Co-Founder, Developer</p>
+          <p class="info-text team__info">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet
+            risus. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam quis risus eget urna mollis
+            ornare vel eu leo.</p>
+          <div class="networks team__networks">
+            <ul class="networks__list">
+              <li class="networks__item">
+                <a href="#" class="networks__link team__networks--facebook">facebook</a>
+              </li>
+              <li class="networks__item">
+                <a href="#" class="networks__link team__networks--twitter">twitter</a>
+              </li>
+              <li class="networks__item">
+                <a href="#" class="networks__link team__networks--linkedin">linkedin</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
       <div class="team">
         <img src="img/team3.jpg" alt="Victoria Valdez">
-        <h2 class="team__name">Victoria Valdez</h2>
-        <p class="team__position">UI Designer</p>
-        <p class="info-text team__info">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet
-          risus. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam quis risus eget urna mollis
-          ornare vel eu leo.</p>
-        <div class="networks team__networks">
-          <ul class="networks__list">
-            <li class="networks__item">
-              <a href="#" class="networks__link team__networks--facebook">facebook</a>
-            </li>
-            <li class="networks__item">
-              <a href="#" class="networks__link team__networks--twitter">twitter</a>
-            </li>
-            <li class="networks__item">
-              <a href="#" class="networks__link team__networks--linkedin">linkedin</a>
-            </li>
-          </ul>
+        <div class="team__text">
+          <h2 class="team__name">Victoria Valdez</h2>
+          <p class="team__position">UI Designer</p>
+          <p class="info-text team__info">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet
+            risus. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam quis risus eget urna mollis
+            ornare vel eu leo.</p>
+          <div class="networks team__networks">
+            <ul class="networks__list">
+              <li class="networks__item">
+                <a href="#" class="networks__link team__networks--facebook">facebook</a>
+              </li>
+              <li class="networks__item">
+                <a href="#" class="networks__link team__networks--twitter">twitter</a>
+              </li>
+              <li class="networks__item">
+                <a href="#" class="networks__link team__networks--linkedin">linkedin</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
       <div class="team">
         <img src="img/team4.jpg" alt="Beverly Little">
-        <h2 class="team__name">Beverly Little</h2>
-        <p class="team__position">Data Scientist</p>
-        <p class="info-text team__info">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet
-          risus. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam quis risus eget urna mollis
-          ornare vel eu leo.</p>
-        <div class="networks team__networks">
-          <ul class="networks__list">
-            <li class="networks__item">
-              <a href="#" class="networks__link team__networks--facebook">facebook</a>
-            </li>
-            <li class="networks__item">
-              <a href="#" class="networks__link team__networks--twitter">twitter</a>
-            </li>
-            <li class="networks__item">
-              <a href="#" class="networks__link team__networks--linkedin">linkedin</a>
-            </li>
-          </ul>
+        <div class="team__text">
+          <h2 class="team__name">Beverly Little</h2>
+          <p class="team__position">Data Scientist</p>
+          <p class="info-text team__info">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet
+            risus. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam quis risus eget urna mollis
+            ornare vel eu leo.</p>
+          <div class="networks team__networks">
+            <ul class="networks__list">
+              <li class="networks__item">
+                <a href="#" class="networks__link team__networks--facebook">facebook</a>
+              </li>
+              <li class="networks__item">
+                <a href="#" class="networks__link team__networks--twitter">twitter</a>
+              </li>
+              <li class="networks__item">
+                <a href="#" class="networks__link team__networks--linkedin">linkedin</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -272,7 +298,8 @@
         <input type="radio" name="slider" id="client5">
         <div class="slides">
           <div class="slide client1">
-            <div class="slide__photo client1__photo">
+            <div class="slide__photo">
+              <img src="img/clients1.jpg" alt="client1">
             </div>
             <div class="slide__text">
               <q class="slide__text--q">Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo
@@ -281,7 +308,8 @@
             </div>
           </div>
           <div class="slide client2">
-            <div class="slide__photo client2__photo">
+            <div class="slide__photo">
+                <img src="img/clients2.jpg" alt="client2">
             </div>
             <div class="slide__text">
               <q class="slide__text--q">Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo
@@ -290,7 +318,8 @@
             </div>
           </div>
           <div class="slide client3">
-            <div class="slide__photo client3__photo">
+            <div class="slide__photo">
+                <img src="img/clients3.jpg" alt="client3">
             </div>
             <div class="slide__text">
               <q class="slide__text--q">Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo
@@ -299,7 +328,8 @@
             </div>
           </div>
           <div class="slide client4">
-            <div class="slide__photo client4__photo">
+            <div class="slide__photo">
+                <img src="img/clients4.jpg" alt="client4">
             </div>
             <div class="slide__text">
               <q class="slide__text--q">Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo
@@ -308,7 +338,8 @@
             </div>
           </div>
           <div class="slide client5">
-            <div class="slide__photo client5__photo">
+            <div class="slide__photo">
+                <img src="img/clients5.jpg" alt="client5">
             </div>
             <div class="slide__text">
               <q class="slide__text--q">Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo
@@ -330,7 +361,7 @@
 
     <section class="download" id="download">
       <h2 class="download__caption">Are You Ready to Start? Download Now For Free!</h2>
-      <p class="download__text">Fusce dapibus, tellus ac cursus commodo</p>
+      <p class="download__info">Fusce dapibus, tellus ac cursus commodo</p>
       <a class="btn download__btn" href="#" target="_blank">Download Here</a>
     </section>
 
@@ -371,7 +402,7 @@
       </div>
       <section class="copyright">
         <p class="footer__info copyright__info">Copyright &#169; 2015 ActiveBox. All Rights Reserved</p>
-        <p class="footer__info copyright__info">Made with by
+        <p class="footer__info copyright__info">Made with <span>by</span>
           <a class="footer__link copyright__link" href="#">Kamal Chaneman</a>
         </p>
       </section>
