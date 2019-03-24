@@ -1,0 +1,78 @@
+.footer {
+  z-index: -1;
+  background-color: @bc-footer;
+}
+
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;  
+  flex-wrap: wrap;
+  padding: 58px 0 70px 0;
+    &--center {
+      display: flex;
+      justify-content: center;
+      width: 33.33%;
+    }
+}
+
+.footer__link {
+  text-decoration: none;
+  cursor: pointer;
+  color: @color-on-dark;
+    &:hover,
+    &:focus {
+      color: @color-on-light-2;
+    }
+}
+
+
+.footer__caption {
+  padding: 0;
+  font-size: 0.9em;
+  font-family: "Raleway Bold";
+  font-weight: normal;
+  text-transform: uppercase;
+  text-align: center;
+  color: #ffffff;
+}
+
+.footer__info {
+  margin:  0 0 12px 0;
+  padding: 0;
+  font-size: 0.9em;
+  line-height: 160%;
+  font-family: "Raleway Regular";
+  text-align: center;
+  color: fade(@color-on-dark, 50%);
+}
+
+.footer__networks {
+  margin: 15px 0 0 0;
+}
+
+.footer__networks--facebook {
+  background: url("../img/sprite1.png") no-repeat 0 0;
+    &:hover,
+    &:focus {
+      background: url("../img/sprite.png") no-repeat 0 -50px;
+    }
+}
+
+
+.footer__networks--twitter {
+  background: url("../img/sprite1.png") no-repeat -40px 0;
+    &:hover,
+    &:focus {
+      background: url("../img/sprite.png") no-repeat -40px -50px;
+    }
+}
+
+
+.footer__networks--linkedin {
+  background: url("../img/sprite1.png") no-repeat -80px 0;
+    &:hover,
+    &:focus {
+      background: url("../img/sprite.png") no-repeat -80px -50px;
+    }
+}

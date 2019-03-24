@@ -98,7 +98,7 @@
   background: url("../img/logo.png") no-repeat left;
 }
 
-.logo__caption1 {
+.logo__caption {
   margin: 0;
   padding: 0;
 }
@@ -401,30 +401,30 @@
   text-indent: -9000px;
 }
 
-.team__networks--facebook {
+.networks__link--facebook {
   background: url("../img/sprite.png") no-repeat 0 0;
 }
 
-.team__networks--facebook:hover,
-.team__networks--facebook:focus {
+.networks__link--facebook:hover,
+.networks__link--facebook:focus {
   background: url("../img/sprite.png") no-repeat 0 -50px;
 }
 
-.team__networks--twitter {
+.networks__link--twitter {
   background: url("../img/sprite.png") no-repeat -40px 0;
 }
 
-.team__networks--twitter:hover,
-.team__networks--twitter:focus {
+.networks__link--twitter:hover,
+.networks__link--twitter:focus {
   background: url("../img/sprite.png") no-repeat -40px -50px;
 }
 
-.team__networks--linkedin {
+.networks__link--linkedin {
   background: url("../img/sprite.png") no-repeat -80px 0;
 }
 
-.team__networks--linkedin:hover,
-.team__networks--linkedin:focus {
+.networks__link--linkedin:hover,
+.networks__link--linkedin:focus {
   background: url("../img/sprite.png") no-repeat -80px -50px;
 }
 

@@ -1,0 +1,96 @@
+.slide {
+  display: none;
+  line-height: 0;
+  animation-name: slide;
+  animation-duration: .8s;
+  animation-timing-function: ease-in-out;
+}
+
+.slide__photo,
+.slide__text {
+  width: 50%;
+}
+
+.slide__photo img {
+  width: 100%;
+  height: auto;
+}
+
+.slide__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  &--q {
+    width: 90%;
+    font-style: italic;
+    font-size: 2.25em;
+    line-height: 120%;
+    font-family: Cardo, "Open Sans", Arial;
+    color: @color-on-dark;
+  }
+  &--p {
+    width: 90%;
+    margin: 25px 0 0 0;
+    font-size: 0.8em;
+    line-height: 160%;
+    font-family: "Raleway Bold";
+    text-transform: uppercase;
+    color: @color-on-dark;
+  }
+}
+
+.slider__controls {
+  position: absolute;
+  top: 80%;
+  left: 72%;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  width: 95px;
+  height: 10px;
+}
+
+.slider__btn {
+  width: 12px;
+  height: 12px;
+  background-color: @color-on-dark;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  opacity: 0.2;
+  cursor: pointer;
+  -webkit-transition: opacity ease-in-out 0.5s;  /*переход цвета при наведении курсора плавный, в течении 0.5с по соответствующей кривой безье*/
+  -moz-transition: opacity ease-in-out 0.5s;
+  -o-transition: opacity ease-in-out 0.5s;
+  transition: opacity ease-in-out 0.5s;
+}
+
+.slider__btn:hover, 
+.slider__btn:focus,
+#client1:checked~.slider__controls label:nth-of-type(1),
+#client2:checked~.slider__controls label:nth-of-type(2),
+#client3:checked~.slider__controls label:nth-of-type(3),
+#client4:checked~.slider__controls label:nth-of-type(4),
+#client5:checked~.slider__controls label:nth-of-type(5) {
+opacity: 1;
+}
+
+#client1:checked~.slides>.client1,
+#client2:checked~.slides>.client2,
+#client3:checked~.slides>.client3,
+#client4:checked~.slides>.client4,
+#client5:checked~.slides>.client5 {
+  display: flex;
+}
+
+@keyframes slide {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
