@@ -94,3 +94,56 @@ opacity: 1;
     opacity: 1;
   }
 }
+
+@media screen and (max-width: 1200px) {
+  .slide__text--q {
+    font-size: 1.7em;
+  }
+
+  .slide__text--p {
+    font-size: 0.7em;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  /*слайдшоу в 1 колонку*/
+    .slide {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+    }
+  
+    .slide__photo { 
+      width: 100%;
+      text-align: center;
+    }
+  
+    .slide__text {
+      width: 100%; 
+      margin-top: 0;
+    }
+  
+    .slide__text {
+      padding: 0 5%;
+      text-align: left;
+    }
+  
+    .slide__text--p,
+    .slide__text--q {
+      margin-top: 10px;
+    }
+  
+    .slider__controls {
+      position: static;
+      height: 25px;
+      margin: 10px auto 10px auto;
+    }
+  
+    #client1:checked~.slides>.client1,
+    #client2:checked~.slides>.client2,
+    #client3:checked~.slides>.client3,
+    #client4:checked~.slides>.client4,
+    #client5:checked~.slides>.client5 {
+      display: flex;
+  }
+}

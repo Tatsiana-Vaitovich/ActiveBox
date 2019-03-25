@@ -67,3 +67,26 @@
 .feature__info {
   text-align: center;
 }
+
+@media screen and (max-width: 960px) {
+  /*.feature в 2 колонки*/
+  .feature {
+    .col-2;
+      &:nth-child(3)::before, 
+      &:nth-child(4)::before,
+      &:nth-child(5)::before,
+      &:nth-child(6)::before {
+        .mt-col;
+      }
+    }
+  }
+
+@media screen and (max-width: 640px) {
+  /*.feature в 1 колонку*/
+  .feature {
+    .col-1;
+      &:nth-child(2)::before {
+        .mt-col;
+      }
+    }
+  }

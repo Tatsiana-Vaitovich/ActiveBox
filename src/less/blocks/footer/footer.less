@@ -76,3 +76,21 @@
       background: url("../img/sprite.png") no-repeat -80px -50px;
     }
 }
+
+@media screen and (max-width: 960px) {
+  /*уменьшаю padding*/
+  .footer__wrapper {
+    padding: 50px 0;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  /*.footer в 1 колонку*/
+  .footer__wrapper--center {
+    .col-1;
+      &:nth-child(2),
+      &:nth-child(3) {
+        .mt-col;
+      }
+    }
+  }
