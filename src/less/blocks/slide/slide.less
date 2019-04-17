@@ -93,6 +93,14 @@ opacity: 1;
   }
 }
 
+@media screen and (max-width: 1600px) {
+  .slide__text {
+    padding-top: 4.5%;
+    padding-right: 4.5%;
+  }
+}
+
+
 @media screen and (max-width: 1200px) {
   .slide__text--q {
     font-size: 1.7em;
@@ -134,12 +142,4 @@ opacity: 1;
       margin: 0 auto;
       padding-bottom: 20px;
     }
-  
-    #client1:checked~.slides>.client1,
-    #client2:checked~.slides>.client2,
-    #client3:checked~.slides>.client3,
-    #client4:checked~.slides>.client4,
-    #client5:checked~.slides>.client5 {
-      display: flex;
-  }
 }
