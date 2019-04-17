@@ -1,0 +1,103 @@
+.navigation__wrap {
+  width: 50%;
+}
+
+.navigation__wrap>input {
+  display: none;
+}
+
+.navigation__list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation__item {  /*item - li*/
+  list-style: none;
+}
+
+.navigation__link {
+  font-size: 0.8em;
+  font-family: "Raleway Bold";
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  color: fade(@color-on-dark, 75%);
+    &:hover,
+    &:focus {
+      color: @color-on-dark;
+    }
+}
+
+@media screen and (max-width: 768px) {
+  /*раскрывающееся меню*/
+  .navigation__wrap {
+    width: auto;
+  }
+
+  .navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .navigation__list {
+    display: flex;
+  }
+  
+  .navigation__link {
+    display: block;
+    font-size: 1.5625em;
+    line-height: 1.8em;
+    text-align: center;
+      &:hover,
+      &:focus {
+        color: @color-on-dark;
+      }
+  }
+  
+  .navigation__label {
+    display: block;
+    width: 30px;
+    min-height: 30px;
+    margin-top: 34px;
+    margin-left: auto;
+    margin-right: 5%;
+    background: url("../img/menu.png") no-repeat;
+      &:hover,
+      &:focus {
+        cursor: pointer;
+      }
+      &:active {
+      animation-name: menu;
+      animation-duration: 0.2s;
+      animation-timing-function: ease-in-out;
+    }
+  }
+
+  .navigation__label~.navigation__list {
+    display: none;
+  }
+
+  #menu:checked~.navigation {
+    height: 100%;
+    background-color: fade(@bc-menu, 80%);
+  }
+
+  #menu:checked~.navigation>.navigation__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  #menu:checked~.navigation>.navigation__label {
+    background: url("../img/menu.png") no-repeat 0 -40px;
+  }
+}

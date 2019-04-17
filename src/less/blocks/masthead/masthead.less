@@ -1,0 +1,45 @@
+.masthead {
+  min-height: 750px;
+  padding: 245px 0 140px 0;
+  background: url("../img/header-block.png") no-repeat center;
+}
+
+.masthead__wrapper {
+  max-width: 950px; /*50%*/
+  margin: 0 auto;
+}
+
+.masthead__caption {
+  margin: 0;
+  font-size: 4em;
+  line-height: 110%;
+  text-transform: uppercase;
+  text-align: center;
+  color: @color-on-dark;
+}
+
+.masthead__info {
+  margin: 25px 0 0 0;
+  font-size: 1.4em;
+  line-height: 150%;
+  font-family: "Raleway Regular";
+  text-align: center;
+  color: @color-on-dark;
+}
+
+.masthead__btn {
+  margin: 72px auto 0 auto;
+}
+
+@media screen and (max-width: 960px) {
+/*уменьшаю размер шрифтов*/
+  .masthead__caption {
+    font-size: 2em;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .masthead__wrapper {
+    max-width: 90%;
+  }
+}

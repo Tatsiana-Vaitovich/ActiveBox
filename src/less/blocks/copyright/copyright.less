@@ -1,0 +1,18 @@
+.copyright {
+  z-index: 1;
+  padding: 25px 0 25px 0;
+  background-color: @bc-start-end;
+}
+
+.copyright__info {
+  .footer__info;
+  max-width: 325px;
+  margin: 0 auto;
+    & span::before {
+      content: "";
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      background: url(../img/heard.png) no-repeat;
+    }
+}

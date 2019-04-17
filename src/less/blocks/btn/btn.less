@@ -1,0 +1,22 @@
+.btn {
+  display: block;
+  width: 200px;
+  padding: 16px 0 16px 0;
+  font-size: 0.8em;
+  font-family: "Raleway SemiBold";
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  color: @color-on-dark;
+  background-color: @bc-btn;
+  border: none;
+  transition: background-color ease-in-out .5s;
+  animation-name: btn;
+  animation-duration: .7s;
+  animation-timing-function: ease-in-out;
+    &:hover,
+    &:focus {
+      background-color: @bc-btn-hover;
+    }
+}
