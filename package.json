@@ -51,6 +51,8 @@
     "kind-of": "^6.0.3",
     "lodash": "^4.17.19",
     "lodash.merge": "^4.6.2",
-    "minimist": "^1.2.5"
+    "minimist": "^1.2.5",
+    "mixin-deep": "^2.0.1",
+    "set-value": "^3.0.2"
   }
 }
