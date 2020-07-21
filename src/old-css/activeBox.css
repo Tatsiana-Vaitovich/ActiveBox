@@ -701,7 +701,7 @@ opacity: 1;
   display: inline-block;
   width: 15px;
   height: 15px;
-  background: url(../img/heard.png) no-repeat;
+  background: url("../img/heard.png") no-repeat;
 }
 
 @keyframes btn {
