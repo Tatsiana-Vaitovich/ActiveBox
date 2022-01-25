@@ -11,3 +11,6 @@ node_modules/
 npm-debug.*
 src/css/*.css
 Thumbs.db
+gulpdile.js
+package-lock.json
+package.json
